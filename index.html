@@ -13,7 +13,7 @@
     <nav class="desktop-nav" aria-label="Navegação principal">
       <a href="#inicio">Início</a><a href="#conteudos">Conteúdos</a><a href="#jogos">Jogos</a><a href="#ranking">Ranking</a><a href="#perfil">Perfil</a>
     </nav>
-    <a class="menu-link" href="#menu" aria-label="Abrir navegação">☰</a>
+    <button class="menu-link" id="open-auth" type="button">Entrar</button>
   </header>
 
   <main>
@@ -53,15 +53,19 @@
       <article class="mini-panel ranking-panel"><span class="eyebrow">RANKING</span><h2>Destaques da aprendizagem</h2><div class="rank-row"><b>01</b><span>Estudante destaque</span><strong>---</strong></div><div class="rank-row"><b>02</b><span>Próxima posição</span><strong>---</strong></div><div class="rank-row"><b>03</b><span>Continue praticando</span><strong>---</strong></div><small>O ranking será ativado com o sistema de pontuação.</small></article>
     </section>
 
-    <section class="section-wrap challenge-section" id="desafios"><div class="challenge-copy"><span class="eyebrow">DESAFIO DA VEZ</span><h2>Prepare-se para<br><span>colocar em prática.</span></h2><p>Em breve, você poderá responder perguntas, acumular pontos e acompanhar seu desempenho.</p></div><div class="challenge-card"><div class="challenge-symbol">✦</div><span>PRÓXIMA ATIVIDADE</span><h3>Quiz de mídias digitais</h3><p>Teste seus conhecimentos de forma leve e interativa.</p><span class="locked">DISPONÍVEL EM BREVE</span></div></section>
+    <section class="section-wrap challenge-section" id="desafios"><div class="challenge-copy"><span class="eyebrow">DESAFIO DA VEZ</span><h2>Prepare-se para<br><span>colocar em prática.</span></h2><p>Em breve, você poderá responder perguntas, acumular pontos e acompanhar seu desempenho.</p></div><div class="challenge-card"><div class="challenge-symbol">✦</div><span>ATIVIDADE INTERATIVA</span><h3>Quiz de mídias digitais</h3><p>Responda às perguntas, confira seu resultado e ganhe pontos.</p><button class="primary-btn" id="start-quiz" type="button">Começar quiz →</button></div></section>
 
     <section class="section-wrap about-section" id="sobre"><span class="eyebrow">SOBRE O PROJETO</span><h2>Informação para aprender,<br><span>tecnologia para conectar.</span></h2><p>Este espaço reúne conteúdos introdutórios sobre mídias digitais em uma experiência visual simples e acessível.</p></section>
-    <section class="section-wrap profile-section" id="perfil"><div class="profile-icon">♙</div><div><span class="eyebrow">ÁREA DO ESTUDANTE</span><h2>Seu perfil</h2><p>A área de perfil poderá reunir seus dados, atividades concluídas e evolução.</p></div><span class="coming-soon">EM BREVE</span></section>
+    <section class="section-wrap profile-section" id="perfil"><div class="profile-icon">♙</div><div class="profile-info"><span class="eyebrow">ÁREA DO ESTUDANTE</span><h2 id="profile-title">Seu perfil</h2><p id="profile-description">Entre ou crie uma conta para salvar seus pontos e acompanhar sua evolução.</p><div class="profile-stats"><span><b id="profile-points">0</b> pontos</span><span><b id="profile-quizzes">0</b> quizzes</span></div><button class="secondary-btn" id="profile-action" type="button">Entrar / Criar conta</button></div></section>
   </main>
 
   <footer><a class="brand" href="#inicio"><span class="brand-mark">✦</span><span>Mídias <strong>Digitais</strong></span></a><p>Informativo de Aprendizagem de Mídias Digitais</p><span>© 2026 • Projeto Integrador</span></footer>
   <nav class="mobile-nav" id="menu" aria-label="Navegação inferior">
     <a class="selected" href="#inicio"><span>⌂</span>Início</a><a href="#conteudos"><span>▤</span>Conteúdos</a><a href="#jogos"><span>◈</span>Jogos</a><a href="#ranking"><span>♛</span>Ranking</a><a href="#perfil"><span>♙</span>Perfil</a>
   </nav>
+
+  <dialog id="auth-dialog" class="app-dialog"><form method="dialog" class="dialog-close"><button aria-label="Fechar">×</button></form><div class="dialog-inner"><span class="eyebrow">ÁREA DO ESTUDANTE</span><h2 id="auth-heading">Entre na sua conta</h2><p id="auth-message">Acesse seu perfil ou crie uma conta para salvar seu progresso.</p><label>Nome (somente para cadastro)<input id="auth-name" type="text" autocomplete="name" placeholder="Seu nome"></label><label>E-mail<input id="auth-email" type="email" autocomplete="email" placeholder="voce@email.com"></label><label>Senha<input id="auth-password" type="password" autocomplete="current-password" placeholder="Mínimo de 6 caracteres"></label><div class="dialog-actions"><button class="primary-btn" id="login-btn" type="button">Entrar</button><button class="secondary-btn" id="signup-btn" type="button">Criar conta</button></div><button class="text-button" id="logout-btn" type="button" hidden>Sair da conta</button><p class="form-feedback" id="auth-feedback" role="status"></p></div></dialog>
+  <dialog id="quiz-dialog" class="app-dialog"><form method="dialog" class="dialog-close"><button aria-label="Fechar">×</button></form><div class="dialog-inner"><span class="eyebrow">QUIZ • MÍDIAS DIGITAIS</span><h2 id="quiz-title">Vamos testar seus conhecimentos?</h2><p id="quiz-progress">Pergunta 1 de 5</p><div id="quiz-content"></div><p class="form-feedback" id="quiz-feedback" role="status"></p><button class="primary-btn" id="quiz-next" type="button">Responder</button></div></dialog>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>
 </body>
 </html>

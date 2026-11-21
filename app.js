@@ -38,7 +38,14 @@
     const name=$('auth-name').value.trim(),email=$('auth-email').value.trim(),password=$('auth-password').value;
     if(!name||!email||password.length<6)return feedback('auth-feedback','Informe seu nome, e-mail e uma senha com pelo menos 6 caracteres.');
     feedback('auth-feedback','Criando sua conta...');
-    const {data,error}=await supabase.auth.signUp({email,password,options:{data:{full_name:name}}});
+    const {data,error}=await supabase.auth.signUp({
+  email,
+  password,
+  options:{
+    data:{full_name:name},
+    emailRedirectTo: window.location.origin + window.location.pathname
+  }
+});
     if(error)return feedback('auth-feedback',error.message);
     if(data.session){feedback('auth-feedback','Conta criada! Você já está conectado.');await refreshProfile();}
     else feedback('auth-feedback','Cadastro iniciado! Verifique seu e-mail para confirmar a conta e depois entre.');

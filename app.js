@@ -152,7 +152,9 @@ async function nextQuestion(){
     if(currentUser&&supabase){const {error}=await supabase.from('quiz_attempts').insert({user_id:currentUser.id,quiz_code:'fundamentos-midias-digitais',score:score,points:points,total_questions:questions.length});if(error)feedback('quiz-feedback','Resultado calculado, mas não foi possível salvar: '+error.message);else{await refreshProfile();feedback('quiz-feedback','Pontuação salva no seu perfil!');}}
     else feedback('quiz-feedback','Entre na sua conta para salvar esta pontuação no seu perfil e no ranking.');
   }
-  function closeQuiz(){quizDialog.close();$('quiz-next').onclick=null;$('quiz-next').addEventListener('click',nextQuestion);}
+  function closeQuiz(){
+  quizDialog.close();
+  }
   $('open-auth').addEventListener('click',()=>{feedback('auth-feedback','');authDialog.showModal();});$('profile-action').addEventListener('click',()=>{feedback('auth-feedback','');authDialog.showModal();});$('signup-btn').addEventListener('click',signUp);$('login-btn').addEventListener('click',signIn);$('logout-btn').addEventListener('click',signOut);$('start-quiz').addEventListener('click',startQuiz);$('quiz-next').addEventListener('click',nextQuestion);
   init();
 })();

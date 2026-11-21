@@ -143,18 +143,21 @@ async function nextQuestion(){
     feedback('quiz-feedback','Entre na sua conta para salvar esta pontuação no seu perfil e no ranking.');
   }
 
-  quizSaving=false;
+    quizSaving=false;
   $('quiz-next').disabled=false;
 }
-    if(!answered){if(selected===null)return feedback('quiz-feedback','Escolha uma alternativa antes de responder.');answered=true;const q=questions[quizIndex];const correct=selected===q.c;if(correct)score++;document.querySelectorAll('.quiz-option').forEach((b,i)=>{b.disabled=true;if(i===q.c)b.classList.add('chosen');});feedback('quiz-feedback',(correct?'Resposta correta! ':'Não foi dessa vez. ')+q.why);$('quiz-next').textContent=quizIndex===questions.length-1?'Finalizar':'Próxima pergunta';return;}
-    if(quizIndex<questions.length-1){quizIndex++;renderQuestion();return;}
-    const points=score*10;$('quiz-title').textContent=`Você acertou ${score} de ${questions.length}!`;$('quiz-content').innerHTML=`<p>Você ganhou <strong>${points} pontos</strong> neste quiz.</p>`;$('quiz-progress').textContent='Resultado final';$('quiz-next').textContent='Concluir';$('quiz-next').onclick=closeQuiz;feedback('quiz-feedback','');
-    if(currentUser&&supabase){const {error}=await supabase.from('quiz_attempts').insert({user_id:currentUser.id,quiz_code:'fundamentos-midias-digitais',score:score,points:points,total_questions:questions.length});if(error)feedback('quiz-feedback','Resultado calculado, mas não foi possível salvar: '+error.message);else{await refreshProfile();feedback('quiz-feedback','Pontuação salva no seu perfil!');}}
-    else feedback('quiz-feedback','Entre na sua conta para salvar esta pontuação no seu perfil e no ranking.');
-  }
-  function closeQuiz(){
+
+function closeQuiz(){
   quizDialog.close();
-  }
-  $('open-auth').addEventListener('click',()=>{feedback('auth-feedback','');authDialog.showModal();});$('profile-action').addEventListener('click',()=>{feedback('auth-feedback','');authDialog.showModal();});$('signup-btn').addEventListener('click',signUp);$('login-btn').addEventListener('click',signIn);$('logout-btn').addEventListener('click',signOut);$('start-quiz').addEventListener('click',startQuiz);$('quiz-next').addEventListener('click',nextQuestion);
-  init();
+}
+
+$('open-auth').addEventListener('click',()=>{feedback('auth-feedback','');authDialog.showModal();});
+$('profile-action').addEventListener('click',()=>{feedback('auth-feedback','');authDialog.showModal();});
+$('signup-btn').addEventListener('click',signUp);
+$('login-btn').addEventListener('click',signIn);
+$('logout-btn').addEventListener('click',signOut);
+$('start-quiz').addEventListener('click',startQuiz);
+$('quiz-next').addEventListener('click',nextQuestion);
+
+init();
 })();

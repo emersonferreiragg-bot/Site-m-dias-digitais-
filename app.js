@@ -4,6 +4,7 @@
   const $ = (id) => document.getElementById(id);
   const authDialog = $('auth-dialog'), quizDialog = $('quiz-dialog');
   let supabase = null, currentUser = null, quizIndex = 0, selected = null, score = 0, answered = false;
+let quizCompleted = false, quizSaving = false;
   const questions = [
     {q:'O que são mídias digitais?',a:['Meios digitais usados para criar e compartilhar informações','Somente jornais impressos','Apenas aparelhos de televisão'],c:0,why:'Mídias digitais envolvem meios e tecnologias digitais de criação, circulação e consumo de informações.'},
     {q:'Qual atitude ajuda a proteger sua conta?',a:['Usar a mesma senha em todos os sites','Criar uma senha forte e exclusiva','Compartilhar a senha com colegas'],c:1,why:'Senhas fortes e exclusivas reduzem o risco de invasão.'},

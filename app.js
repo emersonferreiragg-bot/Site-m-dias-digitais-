@@ -78,7 +78,74 @@ let quizCompleted = false, quizSaving = false;
   quizDialog.showModal();
   }
   function renderQuestion(){const q=questions[quizIndex];$('quiz-title').textContent=q.q;$('quiz-progress').textContent=`Pergunta ${quizIndex+1} de ${questions.length}`;$('quiz-content').innerHTML='';feedback('quiz-feedback','');$('quiz-next').textContent='Responder';$('quiz-next').disabled=false;selected=null;answered=false;q.a.forEach((answer,i)=>{const b=document.createElement('button');b.type='button';b.className='quiz-option';b.textContent=answer;b.addEventListener('click',()=>{if(answered)return;selected=i;document.querySelectorAll('.quiz-option').forEach(x=>x.classList.remove('chosen'));b.classList.add('chosen');});$('quiz-content').appendChild(b);});}
-  async function nextQuestion(){
+  
+async function nextQuestion(){
+  if(quizCompleted){
+    if(!quizSaving) closeQuiz();
+    return;
+  }
+
+  if(!answered){
+    if(selected===null){
+      return feedback('quiz-feedback','Escolha uma alternativa antes de responder.');
+    }
+
+    answered=true;
+    const q=questions[quizIndex];
+    const correct=selected===q.c;
+
+    if(correct) score++;
+
+    document.querySelectorAll('.quiz-option').forEach((b,i)=>{
+      b.disabled=true;
+      if(i===q.c) b.classList.add('chosen');
+    });
+
+    feedback('quiz-feedback',(correct?'Resposta correta! ':'Não foi dessa vez. ')+q.why);
+    $('quiz-next').textContent=quizIndex===questions.length-1?'Finalizar':'Próxima pergunta';
+    return;
+  }
+
+  if(quizIndex<questions.length-1){
+    quizIndex++;
+    renderQuestion();
+    return;
+  }
+
+  quizCompleted=true;
+  quizSaving=true;
+
+  const points=score*10;
+
+  $('quiz-title').textContent=`Você acertou ${score} de ${questions.length}!`;
+  $('quiz-content').innerHTML=`<p>Você ganhou <strong>${points} pontos</strong> neste quiz.</p>`;
+  $('quiz-progress').textContent='Resultado final';
+  $('quiz-next').textContent='Concluir';
+  $('quiz-next').disabled=true;
+  feedback('quiz-feedback','');
+
+  if(currentUser&&supabase){
+    const {error}=await supabase.from('quiz_attempts').insert({
+      user_id:currentUser.id,
+      quiz_code:'fundamentos-midias-digitais',
+      score:score,
+      points:points,
+      total_questions:questions.length
+    });
+
+    if(error){
+      feedback('quiz-feedback','Resultado calculado, mas não foi possível salvar: '+error.message);
+    }else{
+      await refreshProfile();
+      feedback('quiz-feedback','Pontuação salva no seu perfil!');
+    }
+  }else{
+    feedback('quiz-feedback','Entre na sua conta para salvar esta pontuação no seu perfil e no ranking.');
+  }
+
+  quizSaving=false;
+  $('quiz-next').disabled=false;
+}
     if(!answered){if(selected===null)return feedback('quiz-feedback','Escolha uma alternativa antes de responder.');answered=true;const q=questions[quizIndex];const correct=selected===q.c;if(correct)score++;document.querySelectorAll('.quiz-option').forEach((b,i)=>{b.disabled=true;if(i===q.c)b.classList.add('chosen');});feedback('quiz-feedback',(correct?'Resposta correta! ':'Não foi dessa vez. ')+q.why);$('quiz-next').textContent=quizIndex===questions.length-1?'Finalizar':'Próxima pergunta';return;}
     if(quizIndex<questions.length-1){quizIndex++;renderQuestion();return;}
     const points=score*10;$('quiz-title').textContent=`Você acertou ${score} de ${questions.length}!`;$('quiz-content').innerHTML=`<p>Você ganhou <strong>${points} pontos</strong> neste quiz.</p>`;$('quiz-progress').textContent='Resultado final';$('quiz-next').textContent='Concluir';$('quiz-next').onclick=closeQuiz;feedback('quiz-feedback','');

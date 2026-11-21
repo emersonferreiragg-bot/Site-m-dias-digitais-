@@ -67,7 +67,16 @@ let quizCompleted = false, quizSaving = false;
     if(error||!data?.length){const p=document.createElement('p');p.className='rank-empty';p.textContent='O ranking aparecerá aqui quando os estudantes concluírem quizzes.';panel.appendChild(p);return;}
     data.slice(0,10).forEach((item,i)=>{const row=document.createElement('div');row.className='rank-row';const pos=document.createElement('b');pos.textContent=String(i+1).padStart(2,'0');const name=document.createElement('span');name.textContent=item.display_name||'Estudante';const points=document.createElement('strong');points.textContent=(item.total_points||0)+' pts';row.append(pos,name,points);panel.appendChild(row);});
   }
-  function startQuiz(){quizIndex=0;score=0;selected=null;answered=false;renderQuestion();quizDialog.showModal();}
+  function startQuiz(){
+  quizIndex=0;
+  score=0;
+  selected=null;
+  answered=false;
+  quizCompleted=false;
+  quizSaving=false;
+  renderQuestion();
+  quizDialog.showModal();
+  }
   function renderQuestion(){const q=questions[quizIndex];$('quiz-title').textContent=q.q;$('quiz-progress').textContent=`Pergunta ${quizIndex+1} de ${questions.length}`;$('quiz-content').innerHTML='';feedback('quiz-feedback','');$('quiz-next').textContent='Responder';$('quiz-next').disabled=false;selected=null;answered=false;q.a.forEach((answer,i)=>{const b=document.createElement('button');b.type='button';b.className='quiz-option';b.textContent=answer;b.addEventListener('click',()=>{if(answered)return;selected=i;document.querySelectorAll('.quiz-option').forEach(x=>x.classList.remove('chosen'));b.classList.add('chosen');});$('quiz-content').appendChild(b);});}
   async function nextQuestion(){
     if(!answered){if(selected===null)return feedback('quiz-feedback','Escolha uma alternativa antes de responder.');answered=true;const q=questions[quizIndex];const correct=selected===q.c;if(correct)score++;document.querySelectorAll('.quiz-option').forEach((b,i)=>{b.disabled=true;if(i===q.c)b.classList.add('chosen');});feedback('quiz-feedback',(correct?'Resposta correta! ':'Não foi dessa vez. ')+q.why);$('quiz-next').textContent=quizIndex===questions.length-1?'Finalizar':'Próxima pergunta';return;}

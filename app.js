@@ -114,7 +114,18 @@ let quizCompleted = false, quizSaving = false;
     if(!email||!password)return feedback('auth-feedback','Informe seu e-mail e sua senha.');
     feedback('auth-feedback','Entrando...');const {error}=await supabase.auth.signInWithPassword({email,password});
     if(error)return feedback('auth-feedback',error.message);
-    feedback('auth-feedback','Login realizado!');await refreshProfile();setTimeout(()=>authDialog.close(),700);
+    feedback('auth-feedback','Login realizado!');
+await refreshProfile();
+
+setTimeout(()=>{
+  authDialog.close();
+
+  if(pendingTopic){
+    const topic = pendingTopic;
+    pendingTopic = null;
+    showTopic(topic);
+  }
+},700);
   }
   async function signOut(){if(supabase){await supabase.auth.signOut();feedback('auth-feedback','Você saiu da conta.');await refreshProfile();}}
   async function loadRanking(){

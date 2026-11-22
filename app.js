@@ -1356,11 +1356,13 @@ let quizCompleted = false, quizSaving = false;
     if(user){
       $('profile-title').textContent=user.user_metadata?.full_name||user.email||'Estudante';
       $('profile-description').textContent='Sua conta está conectada. Seus resultados e pontos ficam associados a este perfil.';
-      $('profile-action').textContent='Gerenciar conta'; $('logout-btn').hidden=false;
+      $('profile-action').textContent='Gerenciar conta';
+$('open-auth').hidden=true;
+$('logout-btn').hidden=false;
       const {data}=await supabase.from('profiles').select('display_name,total_points,quiz_count').eq('id',user.id).maybeSingle();
       if(data){$('profile-title').textContent=data.display_name||$('profile-title').textContent;$('profile-points').textContent=data.total_points??0;$('profile-quizzes').textContent=data.quiz_count??0;}
     }else{
-      $('profile-title').textContent='Seu perfil';$('profile-description').textContent='Entre ou crie uma conta para salvar seus pontos e acompanhar sua evolução.';$('profile-action').textContent='Entrar / Criar conta';$('profile-points').textContent='0';$('profile-quizzes').textContent='0';$('logout-btn').hidden=true;
+      $('profile-title').textContent='Seu perfil';$('profile-description').textContent='Entre ou crie uma conta para salvar seus pontos e acompanhar sua evolução.';$('profile-action').textContent='Entrar / Criar conta';$('open-auth').hidden=false;$('profile-points').textContent='0';$('profile-quizzes').textContent='0';$('logout-btn').hidden=true;
     }
     loadRanking();
   }

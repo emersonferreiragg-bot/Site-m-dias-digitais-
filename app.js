@@ -83,6 +83,43 @@ let quizCompleted = false, quizSaving = false;
         <h3>Conclusão</h3>
         <p>A comunicação digital aproxima pessoas e facilita o compartilhamento de conhecimentos. Seu uso responsável contribui para um ambiente virtual mais seguro e respeitoso.</p>
       `
+    },
+
+    criatividade: {
+      title: 'Design e criatividade',
+      body: `
+        <h3>1. O que é design digital?</h3>
+        <p>O design digital é a criação e organização de elementos visuais para sites, aplicativos, redes sociais e outros ambientes digitais. Seu objetivo é transmitir mensagens de forma clara, atrativa e funcional.</p>
+
+        <h3>2. Principais elementos visuais</h3>
+        <p><strong>Cores:</strong> ajudam a transmitir sensações, destacar informações e criar identidade visual.</p>
+        <p><strong>Tipografia:</strong> é o estilo das letras utilizado para organizar e facilitar a leitura dos textos.</p>
+        <p><strong>Formas:</strong> ajudam a organizar informações e construir composições visuais.</p>
+        <p><strong>Imagens:</strong> complementam mensagens e tornam os conteúdos mais interessantes.</p>
+
+        <h3>3. Princípios de composição</h3>
+        <p><strong>Alinhamento:</strong> organiza os elementos e cria uma aparência mais organizada.</p>
+        <p><strong>Contraste:</strong> destaca elementos importantes por meio de diferenças visuais.</p>
+        <p><strong>Hierarquia visual:</strong> orienta o olhar e mostra quais informações são mais importantes.</p>
+        <p><strong>Equilíbrio:</strong> distribui os elementos de maneira harmoniosa.</p>
+
+        <h3>4. A importância da criatividade</h3>
+        <p>A criatividade permite desenvolver ideias originais, solucionar problemas e produzir conteúdos que chamam a atenção do público.</p>
+
+        <h3>5. Ferramentas de criação</h3>
+        <ul>
+          <li>Canva: criação de artes e apresentações.</li>
+          <li>Figma: criação de interfaces e protótipos.</li>
+          <li>Adobe Photoshop: edição e manipulação de imagens.</li>
+          <li>Adobe Illustrator: criação de ilustrações e elementos vetoriais.</li>
+        </ul>
+
+        <h3>6. Exemplo prático</h3>
+        <p>Ao criar um cartaz digital para divulgar um evento escolar, o estudante escolhe cores, fontes, imagens e organiza as informações para comunicar a mensagem de maneira eficiente.</p>
+
+        <h3>Conclusão</h3>
+        <p>O design digital combina criatividade e organização visual para transmitir mensagens. Quando seus elementos são utilizados corretamente, os conteúdos se tornam mais atraentes, compreensíveis e eficientes.</p>
+      `
     }
   };
 

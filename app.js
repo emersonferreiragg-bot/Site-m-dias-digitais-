@@ -50,6 +50,39 @@ let quizCompleted = false, quizSaving = false;
         <h3>Conclusão</h3>
         <p>As mídias digitais transformaram a maneira como aprendemos, trabalhamos e nos comunicamos. Quando utilizadas com responsabilidade, podem ser grandes ferramentas de conhecimento e criatividade.</p>
       `
+    },
+
+    comunicacao: {
+      title: 'Redes e comunicação',
+      body: `
+        <h3>1. O que é comunicação digital?</h3>
+        <p>É a troca de informações por meio da internet e de tecnologias digitais. Ela permite que pessoas conversem, compartilhem ideias e mantenham contato mesmo estando distantes.</p>
+
+        <h3>2. Principais ferramentas</h3>
+        <ul>
+          <li>Aplicativos de mensagens.</li>
+          <li>Redes sociais.</li>
+          <li>Chamadas de vídeo.</li>
+          <li>E-mails.</li>
+          <li>Fóruns e comunidades virtuais.</li>
+        </ul>
+
+        <h3>3. Tipos de comunicação</h3>
+        <p><strong>Comunicação síncrona:</strong> acontece em tempo real, como em chamadas de vídeo e conversas ao vivo.</p>
+        <p><strong>Comunicação assíncrona:</strong> não exige que as pessoas estejam conectadas ao mesmo tempo, como nos e-mails e mensagens respondidas posteriormente.</p>
+
+        <h3>4. Vantagens da comunicação digital</h3>
+        <p>Facilita o contato entre pessoas, permite compartilhar informações rapidamente e ajuda na colaboração em atividades escolares e profissionais.</p>
+
+        <h3>5. Cuidados na internet</h3>
+        <p>É importante respeitar as pessoas, evitar mensagens ofensivas, proteger informações pessoais e verificar a veracidade do que compartilhamos.</p>
+
+        <h3>6. Exemplo prático</h3>
+        <p>Quando estudantes utilizam um grupo de mensagens para organizar um trabalho escolar, estão usando a comunicação digital para trocar informações e colaborar.</p>
+
+        <h3>Conclusão</h3>
+        <p>A comunicação digital aproxima pessoas e facilita o compartilhamento de conhecimentos. Seu uso responsável contribui para um ambiente virtual mais seguro e respeitoso.</p>
+      `
     }
   };
 

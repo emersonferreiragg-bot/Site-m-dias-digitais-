@@ -730,6 +730,247 @@ let quizCompleted = false, quizSaving = false;
     c: 1,
     why: 'Sistemas de recomendação analisam dados e padrões para sugerir conteúdos que possam interessar ao usuário.'
   }
+,
+  {
+    q: 'Uma equipe percebe que os usuários abandonam um formulário antes de concluí-lo. Qual ação pode ajudar a identificar o problema?',
+    a: [
+      'Adicionar mais campos obrigatórios',
+      'Observar usuários realizando o preenchimento e analisar suas dificuldades',
+      'Remover todas as instruções',
+      'Alterar aleatoriamente as cores',
+      'Aumentar o número de etapas sem avaliação'
+    ],
+    c: 1,
+    why: 'A observação e os testes de usabilidade ajudam a identificar obstáculos na experiência dos usuários.'
+  },
+  {
+    q: 'Qual é a principal diferença entre interface do usuário (UI) e experiência do usuário (UX)?',
+    a: [
+      'UI trata da aparência e dos elementos de interação; UX considera a experiência geral de uso',
+      'UI e UX significam exclusivamente programação',
+      'UX trata apenas das cores e UI apenas da velocidade',
+      'UI é utilizada somente em jogos',
+      'UX substitui a necessidade de uma interface'
+    ],
+    c: 0,
+    why: 'UI está relacionada à interface e seus elementos visuais e interativos. UX considera a experiência completa de utilização.'
+  },
+  {
+    q: 'Uma campanha digital alcançou muitas pessoas, mas recebeu poucas interações. Qual conclusão é mais adequada?',
+    a: [
+      'O alcance garante que a campanha atingiu todos os objetivos',
+      'O conteúdo pode precisar de ajustes para estimular a participação do público',
+      'As métricas não possuem utilidade',
+      'A campanha deve ser encerrada sem análise',
+      'O número de seguidores deve ser a única medida considerada'
+    ],
+    c: 1,
+    why: 'Alcance e engajamento medem aspectos diferentes. É necessário analisar os objetivos e o comportamento do público.'
+  },
+  {
+    q: 'Qual prática contribui para evitar a sobrecarga de informações em uma peça gráfica?',
+    a: [
+      'Utilizar todos os elementos disponíveis',
+      'Organizar o conteúdo por importância e eliminar informações desnecessárias',
+      'Aplicar várias fontes sem critério',
+      'Reduzir o espaço entre todos os elementos',
+      'Destacar todas as informações com a mesma intensidade'
+    ],
+    c: 1,
+    why: 'A seleção e a organização das informações tornam a mensagem mais clara e facilitam sua compreensão.'
+  },
+  {
+    q: 'Por que o texto alternativo é importante em imagens de páginas digitais?',
+    a: [
+      'Porque aumenta obrigatoriamente a resolução',
+      'Porque descreve o conteúdo visual para tecnologias assistivas',
+      'Porque substitui todos os títulos',
+      'Porque impede o carregamento das imagens',
+      'Porque altera automaticamente as cores'
+    ],
+    c: 1,
+    why: 'O texto alternativo pode transmitir informações visuais a pessoas que utilizam leitores de tela.'
+  },
+  {
+    q: 'Qual é o risco de utilizar apenas cores para indicar informações importantes em uma interface?',
+    a: [
+      'A interface ficará necessariamente mais lenta',
+      'Alguns usuários podem não distinguir as informações, especialmente pessoas com daltonismo',
+      'O conteúdo será convertido em áudio',
+      'A página deixará de funcionar em computadores',
+      'As imagens perderão sua resolução'
+    ],
+    c: 1,
+    why: 'Informações também devem ser indicadas por textos, ícones ou outros recursos, não apenas por cores.'
+  },
+  {
+    q: 'Ao planejar uma publicação para diferentes redes sociais, qual estratégia é mais adequada?',
+    a: [
+      'Publicar sempre o mesmo formato sem considerar a plataforma',
+      'Adaptar linguagem, formato e apresentação ao público e às características de cada plataforma',
+      'Ignorar as dimensões recomendadas',
+      'Utilizar exclusivamente textos longos',
+      'Evitar analisar os resultados'
+    ],
+    c: 1,
+    why: 'Cada plataforma possui características e públicos próprios, por isso a adaptação pode melhorar a comunicação.'
+  },
+  {
+    q: 'Qual é a função de um sistema de gerenciamento de conteúdo (CMS)?',
+    a: [
+      'Controlar exclusivamente a temperatura do computador',
+      'Facilitar a criação, edição e organização de conteúdos digitais',
+      'Substituir todos os sistemas operacionais',
+      'Criar conexões físicas de internet',
+      'Impedir a publicação de páginas'
+    ],
+    c: 1,
+    why: 'Um CMS permite administrar conteúdos de sites sem exigir que todas as alterações sejam feitas diretamente no código.'
+  },
+  {
+    q: 'Uma imagem será impressa em tamanho grande. Qual cuidado é importante para evitar perda perceptível de qualidade?',
+    a: [
+      'Utilizar uma imagem com resolução adequada ao tamanho e à distância de visualização',
+      'Reduzir a imagem para poucos pixels',
+      'Converter qualquer arquivo para GIF',
+      'Aumentar o tamanho sem considerar os pixels disponíveis',
+      'Aplicar transparência em toda a imagem'
+    ],
+    c: 0,
+    why: 'A resolução necessária depende do tamanho de impressão e da distância em que o material será observado.'
+  },
+  {
+    q: 'Qual alternativa apresenta uma característica de uma fonte tipográfica serifada?',
+    a: [
+      'Possui pequenos traços nas extremidades de algumas letras',
+      'Não apresenta qualquer diferença entre letras',
+      'É formada exclusivamente por símbolos',
+      'Não pode ser utilizada em textos impressos',
+      'Possui sempre aparência manuscrita'
+    ],
+    c: 0,
+    why: 'Fontes serifadas apresentam pequenos prolongamentos ou acabamentos nas extremidades de determinados caracteres.'
+  },
+  {
+    q: 'Por que é importante identificar conteúdos patrocinados em plataformas digitais?',
+    a: [
+      'Para impedir que os usuários visualizem anúncios',
+      'Para deixar claro quando existe uma relação comercial ou publicidade',
+      'Para garantir que o produto anunciado seja o melhor',
+      'Para eliminar a necessidade de verificar informações',
+      'Para transformar anúncios em notícias'
+    ],
+    c: 1,
+    why: 'A identificação da publicidade favorece a transparência e permite que o público reconheça conteúdos comerciais.'
+  },
+  {
+    q: 'Qual comportamento pode indicar uma tentativa de engenharia social?',
+    a: [
+      'Uma pessoa solicita informações confidenciais usando pressão ou fingindo ser alguém de confiança',
+      'Um programa organiza arquivos por nome',
+      'Um site apresenta seu endereço institucional',
+      'Um usuário altera a própria foto de perfil',
+      'Um aplicativo recebe uma atualização oficial'
+    ],
+    c: 0,
+    why: 'A engenharia social explora a confiança e as emoções das pessoas para obter informações ou provocar ações.'
+  },
+  {
+    q: 'Qual é a finalidade de manter uma linguagem visual consistente em uma plataforma educacional?',
+    a: [
+      'Dificultar o reconhecimento das seções',
+      'Criar unidade visual e facilitar a identificação dos elementos',
+      'Impedir atualizações futuras',
+      'Utilizar obrigatoriamente apenas uma cor',
+      'Eliminar a hierarquia das informações'
+    ],
+    c: 1,
+    why: 'A consistência visual ajuda os usuários a reconhecer padrões e compreender melhor a organização da plataforma.'
+  },
+  {
+    q: 'Ao utilizar dados de uma pesquisa em um infográfico, qual cuidado é essencial?',
+    a: [
+      'Modificar os números para melhorar a aparência',
+      'Apresentar os dados sem indicar sua origem',
+      'Verificar a fonte e representar os dados de maneira fiel',
+      'Escolher apenas os números que confirmam uma opinião',
+      'Eliminar informações que contradizem a conclusão'
+    ],
+    c: 2,
+    why: 'A precisão dos dados e a identificação das fontes são fundamentais para a credibilidade de um infográfico.'
+  },
+  {
+    q: 'Qual é a principal vantagem de utilizar componentes reutilizáveis no desenvolvimento de interfaces?',
+    a: [
+      'Impedir a manutenção do projeto',
+      'Reaproveitar elementos e manter maior consistência entre telas',
+      'Aumentar obrigatoriamente o tamanho dos arquivos',
+      'Eliminar a necessidade de testes',
+      'Criar elementos diferentes em todas as páginas'
+    ],
+    c: 1,
+    why: 'Componentes reutilizáveis reduzem repetição e ajudam a manter padrões visuais e funcionais.'
+  },
+  {
+    q: 'Uma pessoa utiliza uma imagem gerada por IA que apresenta informações visuais incorretas. Qual deve ser sua atitude antes de publicar?',
+    a: [
+      'Publicar sem revisar, pois a IA não comete erros',
+      'Verificar o resultado e corrigir problemas relevantes',
+      'Aumentar a saturação para esconder os erros',
+      'Compartilhar como fotografia documental sem confirmação',
+      'Ignorar possíveis impactos da imagem'
+    ],
+    c: 1,
+    why: 'Conteúdos gerados por IA podem conter erros e precisam de revisão antes da divulgação.'
+  },
+  {
+    q: 'Qual é a função de um domínio na identificação de um site?',
+    a: [
+      'Representar o endereço utilizado para localizar o site na internet',
+      'Definir a resolução das imagens',
+      'Armazenar exclusivamente vídeos',
+      'Substituir o conteúdo das páginas',
+      'Determinar o número de usuários conectados'
+    ],
+    c: 0,
+    why: 'O domínio é um nome utilizado para acessar um endereço na internet, como exemplo.com.'
+  },
+  {
+    q: 'Por que é importante atualizar regularmente um site ou aplicativo?',
+    a: [
+      'Para remover toda a identidade visual',
+      'Para corrigir falhas, melhorar a segurança e aperfeiçoar funcionalidades',
+      'Para impedir o acesso de novos usuários',
+      'Para eliminar todos os dados automaticamente',
+      'Para garantir que nunca haverá problemas'
+    ],
+    c: 1,
+    why: 'Atualizações podem corrigir vulnerabilidades, resolver problemas e melhorar o funcionamento do produto.'
+  },
+  {
+    q: 'Qual alternativa representa melhor o conceito de cultura participativa nas mídias digitais?',
+    a: [
+      'Os usuários apenas recebem informações sem interagir',
+      'Os usuários também produzem, compartilham e colaboram na circulação de conteúdos',
+      'Somente empresas podem publicar conteúdos',
+      'A comunicação ocorre exclusivamente por meios impressos',
+      'A participação do público é proibida'
+    ],
+    c: 1,
+    why: 'A cultura participativa valoriza a contribuição dos usuários na criação, circulação e discussão de conteúdos.'
+  },
+  {
+    q: 'Uma equipe deseja saber se uma mudança no botão de cadastro melhorou os resultados. Qual método permite comparar duas versões?',
+    a: [
+      'Backup incremental',
+      'Teste A/B',
+      'Compressão de imagem',
+      'Mapeamento de cores',
+      'Restauração de sistema'
+    ],
+    c: 1,
+    why: 'O teste A/B compara versões diferentes para avaliar qual apresenta melhor desempenho em determinado objetivo.'
+  }
 ];
   
   function feedback(id,msg){$(id).textContent=msg||'';}

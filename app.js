@@ -19,34 +19,37 @@ let quizCompleted = false, quizSaving = false;
     fundamentos: {
       title: 'Fundamentos das mídias digitais',
       body: `
-        <h3>O que são mídias digitais?</h3>
-        <p>São meios que utilizam tecnologias digitais para criar, transmitir e compartilhar informações.</p>
-        <h3>Onde encontramos?</h3>
-        <p>Nas redes sociais, sites, aplicativos, blogs, vídeos e jogos.</p>
-        <h3>Por que são importantes?</h3>
-        <p>Facilitam o acesso à informação, a comunicação e o compartilhamento de conhecimentos.</p>
+        <h3>1. O que são mídias digitais?</h3>
+        <p>As mídias digitais são meios de comunicação que utilizam tecnologias digitais para criar, transmitir e compartilhar informações. Elas permitem que conteúdos sejam acessados por computadores, celulares e outros dispositivos conectados.</p>
+
+        <h3>2. Onde encontramos as mídias digitais?</h3>
+        <p>Elas estão presentes em diversas ferramentas utilizadas no cotidiano, como:</p>
+        <ul>
+          <li>Redes sociais, como Instagram e TikTok.</li>
+          <li>Sites e blogs informativos.</li>
+          <li>Plataformas de vídeos e músicas.</li>
+          <li>Aplicativos de mensagens.</li>
+          <li>Jogos e ambientes virtuais.</li>
+        </ul>
+
+        <h3>3. Principais características</h3>
+        <p><strong>Interatividade:</strong> permite que os usuários participem, comentem e compartilhem conteúdos.</p>
+        <p><strong>Velocidade:</strong> facilita a transmissão de informações em pouco tempo.</p>
+        <p><strong>Acessibilidade:</strong> possibilita acessar conteúdos em diferentes dispositivos e lugares com conexão.</p>
+        <p><strong>Compartilhamento:</strong> permite que informações sejam distribuídas para muitas pessoas.</p>
+
+        <h3>4. Importância na educação</h3>
+        <p>As mídias digitais ajudam no processo de aprendizagem por meio de videoaulas, pesquisas, livros digitais, plataformas educativas e atividades interativas.</p>
+
+        <h3>5. Uso consciente e responsável</h3>
+        <p>É importante verificar a confiabilidade das informações, respeitar outras pessoas, proteger dados pessoais e evitar compartilhar notícias sem confirmar sua origem.</p>
+
+        <h3>6. Exemplo prático</h3>
+        <p>Quando um estudante assiste a uma videoaula, pesquisa um assunto em um site e compartilha suas descobertas com os colegas, está utilizando diferentes mídias digitais para aprender e se comunicar.</p>
+
+        <h3>Conclusão</h3>
+        <p>As mídias digitais transformaram a maneira como aprendemos, trabalhamos e nos comunicamos. Quando utilizadas com responsabilidade, podem ser grandes ferramentas de conhecimento e criatividade.</p>
       `
-    },
-    comunicacao: {
-      title: 'Redes e comunicação',
-      body: `
-        <h3>O que é comunicação digital?</h3>
-        <p>É a troca de informações por meio de ferramentas e plataformas digitais.</p>
-        <h3>Exemplos</h3>
-        <p>Redes sociais, aplicativos de mensagens, chamadas de vídeo e fóruns online.</p>
-        <h3>Qual sua importância?</h3>
-        <p>Ela aproxima pessoas, facilita a troca de ideias e permite compartilhar informações rapidamente.</p>
-      `
-    },
-    criatividade: {
-      title: 'Design e criatividade',
-      body: `
-        <h3>O que é design digital?</h3>
-        <p>É a criação e organização de elementos visuais em ambientes digitais.</p>
-        <h3>Elementos importantes</h3>
-        <p>Cores, imagens, tipografia, formas e organização dos elementos.</p>
-        <h3>Por que a criatividade importa?</h3>
-        <p>Ajuda a desenvolver soluções originais e criar conteúdos interessantes e atrativos.</p>
       `
     }
   };

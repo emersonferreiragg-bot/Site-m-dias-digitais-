@@ -13,3 +13,84 @@ footer{border-top:1px solid var(--line);padding:28px 6%;display:flex;align-items
 
 /* Funcionalidades: autenticação, perfil e quiz */
 button{font:inherit;cursor:pointer}.menu-link{border:1px solid var(--line,rgba(255,255,255,.15));background:transparent;color:inherit;padding:.55rem 1rem;border-radius:999px}.profile-stats{display:flex;gap:1rem;margin:1rem 0}.profile-stats span{padding:.7rem 1rem;border:1px solid rgba(255,255,255,.12);border-radius:12px}.profile-stats b{color:#57e5f2}.app-dialog{width:min(92vw,480px);max-height:88vh;overflow:auto;border:1px solid rgba(87,229,242,.35);border-radius:22px;background:#101522;color:#f5f7ff;padding:0;box-shadow:0 24px 90px #000b}.app-dialog::backdrop{background:#050812cc;backdrop-filter:blur(5px)}.dialog-inner{padding:1.5rem}.dialog-inner h2{margin:.5rem 0}.dialog-inner label{display:block;margin:1rem 0;color:#dce4f5}.dialog-inner input{display:block;width:100%;box-sizing:border-box;margin-top:.45rem;padding:.85rem;border-radius:10px;border:1px solid #34445d;background:#0b1020;color:#fff}.dialog-close{display:flex;justify-content:flex-end;padding:.5rem .7rem 0}.dialog-close button{border:0;background:transparent;color:#fff;font-size:1.7rem}.dialog-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}.dialog-actions button,.dialog-inner>.primary-btn{flex:1}.form-feedback{min-height:1.4rem;color:#75e7d0}.text-button{background:none;border:0;color:#91dff5;text-decoration:underline;margin-top:1rem}.quiz-option{display:block;width:100%;text-align:left;padding:.85rem;margin:.6rem 0;border:1px solid #35445d;border-radius:12px;background:#151e30;color:#fff}.quiz-option.chosen{border-color:#62e6f0;background:#15333e}.quiz-option:disabled{opacity:.8}.rank-row strong{color:#62e6f0}.rank-empty{opacity:.7;padding:.7rem 0}.challenge-card .primary-btn{display:inline-flex;margin-top:1rem}.mobile-nav a{cursor:pointer}[hidden]{display:none!important}
+/* Visual aprimorado da tela de autenticação */
+#auth-dialog {
+  background:
+    radial-gradient(circle at 90% 5%, rgba(155,108,255,.16), transparent 35%),
+    linear-gradient(145deg, #111d35, #0b1223);
+  border: 1px solid rgba(53,216,245,.35);
+  border-radius: 24px;
+}
+
+#auth-dialog .dialog-inner {
+  padding: 1.8rem;
+}
+
+#auth-dialog .eyebrow {
+  margin-bottom: 12px;
+}
+
+#auth-dialog h2 {
+  font-size: 27px;
+  letter-spacing: -.8px;
+  margin: 10px 0;
+}
+
+#auth-dialog #auth-message {
+  color: #a6b2c9;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+#auth-dialog label {
+  display: block;
+  margin: 17px 0;
+  color: #dce4f5;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#auth-dialog input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 9px;
+  border: 1px solid rgba(130,164,220,.25);
+  border-radius: 11px;
+  background: #080f20;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+#auth-dialog input:focus {
+  border-color: #35d8f5;
+  box-shadow: 0 0 0 3px rgba(53,216,245,.10);
+}
+
+#auth-dialog .dialog-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+#auth-dialog .dialog-actions button {
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 0;
+  flex: 1;
+}
+
+#auth-dialog .text-button {
+  display: block;
+  margin: 16px auto 0;
+  color: #6edff3;
+  font-size: 12px;
+}
+
+#auth-dialog .form-feedback {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 18px;
+}

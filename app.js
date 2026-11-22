@@ -3,6 +3,8 @@
   const key = window.SUPABASE_PUBLISHABLE_KEY;
   const $ = (id) => document.getElementById(id);
   const authDialog = $('auth-dialog'), quizDialog = $('quiz-dialog');
+  const contentDialog = $('content-dialog');
+let pendingTopic = null;
   let supabase = null, currentUser = null, quizIndex = 0, selected = null, score = 0, answered = false;
 let quizCompleted = false, quizSaving = false;
   const questions = [

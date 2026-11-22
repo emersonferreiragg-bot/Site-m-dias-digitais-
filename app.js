@@ -226,6 +226,19 @@ $('login-btn').addEventListener('click',signIn);
 $('logout-btn').addEventListener('click',signOut);
 $('start-quiz').addEventListener('click',startQuiz);
 $('quiz-next').addEventListener('click',nextQuestion);
+  document.querySelectorAll('[data-topic]').forEach(button=>{
+  button.addEventListener('click',event=>{
+    event.preventDefault();
+    openTopic(button.dataset.topic);
+  });
+});
+
+$('content-back').addEventListener('click',()=>{
+  contentDialog.close();
+  document.getElementById('conteudos').scrollIntoView({
+    behavior:'smooth'
+  });
+});
 
 init();
 })();

@@ -501,6 +501,235 @@ let quizCompleted = false, quizSaving = false;
     c: 2,
     why: 'A colaboração digital depende de comunicação clara, respeito e organização entre os participantes.'
   }
+,
+  {
+    q: 'Ao criar uma interface para celular, qual decisão favorece a usabilidade?',
+    a: [
+      'Utilizar botões pequenos e próximos uns dos outros',
+      'Priorizar controles fáceis de identificar e tocar',
+      'Esconder as funções principais em menus complexos',
+      'Utilizar textos sem contraste',
+      'Evitar qualquer indicação de navegação'
+    ],
+    c: 1,
+    why: 'Controles claros e fáceis de tocar tornam a navegação mais simples em dispositivos móveis.'
+  },
+  {
+    q: 'Qual é a finalidade de um mapa de empatia no processo de design?',
+    a: [
+      'Definir exclusivamente as cores de uma marca',
+      'Calcular o custo de impressão de um projeto',
+      'Compreender melhor pensamentos, sentimentos e necessidades dos usuários',
+      'Substituir os testes de usabilidade',
+      'Criar automaticamente o código de um aplicativo'
+    ],
+    c: 2,
+    why: 'O mapa de empatia ajuda a compreender o público e orientar soluções mais adequadas às suas necessidades.'
+  },
+  {
+    q: 'Uma imagem apresenta dimensões de 1920 × 1080 pixels. O que esses números representam?',
+    a: [
+      'A quantidade de cores disponíveis',
+      'A largura e a altura da imagem em pixels',
+      'O tamanho do arquivo em megabytes',
+      'A velocidade de carregamento',
+      'A quantidade de camadas da imagem'
+    ],
+    c: 1,
+    why: 'As dimensões em pixels indicam a largura e a altura da imagem digital.'
+  },
+  {
+    q: 'Qual é a principal característica do formato PNG em relação à transparência?',
+    a: [
+      'Não permite imagens coloridas',
+      'Armazena somente arquivos de áudio',
+      'Pode preservar áreas transparentes na imagem',
+      'Sempre produz arquivos menores que JPEG',
+      'Não permite compressão'
+    ],
+    c: 2,
+    why: 'O PNG oferece suporte à transparência, sendo útil para logotipos, ícones e elementos gráficos.'
+  },
+  {
+    q: 'Em uma composição, utilizar cores complementares significa escolher cores que:',
+    a: [
+      'Estão próximas no círculo cromático',
+      'São exatamente iguais',
+      'Estão em posições opostas no círculo cromático',
+      'Possuem obrigatoriamente a mesma luminosidade',
+      'Não podem ser utilizadas juntas'
+    ],
+    c: 2,
+    why: 'Cores complementares ficam em posições opostas no círculo cromático e podem produzir contraste marcante.'
+  },
+  {
+    q: 'Qual é a principal função das legendas em vídeos digitais?',
+    a: [
+      'Aumentar automaticamente a resolução',
+      'Facilitar o acompanhamento do conteúdo falado e ampliar a acessibilidade',
+      'Substituir todas as imagens',
+      'Reduzir a duração do vídeo',
+      'Impedir a reprodução sem internet'
+    ],
+    c: 1,
+    why: 'Legendas ajudam pessoas surdas ou com deficiência auditiva e também auxiliam quem assiste sem áudio.'
+  },
+  {
+    q: 'Uma equipe deseja avaliar se os usuários conseguem encontrar facilmente um botão em um aplicativo. Qual método é mais adequado?',
+    a: [
+      'Testar a navegação com usuários e observar suas dificuldades',
+      'Escolher a posição do botão sem testar',
+      'Aumentar todos os elementos da tela',
+      'Retirar os menus do aplicativo',
+      'Avaliar somente a quantidade de cores'
+    ],
+    c: 0,
+    why: 'Testes de usabilidade permitem observar como pessoas reais interagem com uma interface.'
+  },
+  {
+    q: 'O que caracteriza uma bolha de filtro nas plataformas digitais?',
+    a: [
+      'A exclusão de todos os conteúdos publicados',
+      'A apresentação de conteúdos personalizados que pode limitar o contato com perspectivas diferentes',
+      'A proteção automática contra notícias falsas',
+      'A impossibilidade de utilizar mecanismos de busca',
+      'A remoção de anúncios de uma plataforma'
+    ],
+    c: 1,
+    why: 'A personalização pode reforçar interesses existentes e reduzir a exposição a opiniões diferentes.'
+  },
+  {
+    q: 'Qual é a diferença entre RGB e CMYK no uso de cores?',
+    a: [
+      'RGB é utilizado principalmente em telas e CMYK em processos de impressão',
+      'RGB é exclusivo para impressão e CMYK para vídeos',
+      'Os dois sistemas representam apenas tons de cinza',
+      'CMYK não permite produzir imagens coloridas',
+      'RGB e CMYK são formatos de arquivo'
+    ],
+    c: 0,
+    why: 'RGB trabalha com luz nas telas, enquanto CMYK utiliza tintas no processo de impressão.'
+  },
+  {
+    q: 'Qual alternativa representa uma aplicação adequada de análise de métricas em redes sociais?',
+    a: [
+      'Alterar a identidade visual diariamente',
+      'Avaliar alcance e engajamento para compreender o desempenho das publicações',
+      'Ignorar os resultados das campanhas',
+      'Considerar apenas o número de seguidores',
+      'Publicar sem definir objetivos'
+    ],
+    c: 1,
+    why: 'Métricas como alcance, cliques e engajamento ajudam a avaliar resultados em relação aos objetivos.'
+  },
+  {
+    q: 'Por que é importante realizar cópias de segurança de arquivos digitais?',
+    a: [
+      'Para aumentar a quantidade de anúncios',
+      'Para evitar a necessidade de organizar arquivos',
+      'Para recuperar informações em caso de perda, falha ou dano',
+      'Para impedir qualquer atualização',
+      'Para tornar arquivos automaticamente públicos'
+    ],
+    c: 2,
+    why: 'Backups permitem recuperar dados quando os arquivos originais são perdidos ou danificados.'
+  },
+  {
+    q: 'Qual é o principal objetivo de uma paleta de cores em um projeto gráfico?',
+    a: [
+      'Definir um conjunto de cores que mantenha coerência visual',
+      'Impedir o uso de imagens',
+      'Substituir a tipografia',
+      'Garantir que todas as cores tenham o mesmo destaque',
+      'Eliminar a necessidade de conhecer o público'
+    ],
+    c: 0,
+    why: 'A paleta orienta o uso das cores e contribui para a unidade visual do projeto.'
+  },
+  {
+    q: 'Uma pessoa recebe um arquivo desconhecido enviado por um contato que não esperava a mensagem. Qual atitude é mais segura?',
+    a: [
+      'Abrir imediatamente o arquivo',
+      'Encaminhar o arquivo para outros contatos',
+      'Confirmar a origem da mensagem e verificar o arquivo antes de abri-lo',
+      'Desativar as proteções do aparelho',
+      'Compartilhar o arquivo em grupos públicos'
+    ],
+    c: 2,
+    why: 'Arquivos inesperados podem conter ameaças. Confirmar a origem e verificar o conteúdo reduz riscos.'
+  },
+  {
+    q: 'Qual é a função do storytelling em uma comunicação digital?',
+    a: [
+      'Organizar informações por ordem alfabética',
+      'Utilizar narrativas para transmitir mensagens e criar conexão com o público',
+      'Eliminar a necessidade de planejamento',
+      'Substituir todos os recursos visuais',
+      'Garantir que uma publicação se torne viral'
+    ],
+    c: 1,
+    why: 'O storytelling utiliza narrativas para tornar a comunicação mais envolvente e significativa.'
+  },
+  {
+    q: 'Qual alternativa descreve melhor o conceito de acessibilidade digital?',
+    a: [
+      'Criar conteúdos disponíveis somente em computadores',
+      'Desenvolver ambientes e conteúdos que possam ser utilizados por pessoas com diferentes necessidades',
+      'Utilizar exclusivamente imagens e vídeos',
+      'Eliminar recursos de navegação por teclado',
+      'Reduzir o tamanho de todas as fontes'
+    ],
+    c: 1,
+    why: 'A acessibilidade digital busca remover barreiras para que diferentes pessoas possam acessar e utilizar conteúdos e serviços.'
+  },
+  {
+    q: 'Em um projeto de interface, o que é um wireframe?',
+    a: [
+      'Uma versão final com todos os efeitos visuais',
+      'Um esquema que representa a estrutura e a organização dos elementos de uma tela',
+      'Um formato de áudio digital',
+      'Um sistema de armazenamento em nuvem',
+      'Uma ferramenta exclusiva para edição de fotografias'
+    ],
+    c: 1,
+    why: 'O wireframe representa a estrutura básica de uma interface antes da definição visual detalhada.'
+  },
+  {
+    q: 'Qual cuidado deve ser tomado ao utilizar músicas em vídeos publicados na internet?',
+    a: [
+      'Utilizar qualquer música sem verificar as permissões',
+      'Considerar direitos autorais e as condições de uso da música',
+      'Acreditar que músicas curtas nunca possuem proteção',
+      'Remover o nome do artista para liberar o uso',
+      'Presumir que toda música encontrada em redes sociais é livre'
+    ],
+    c: 1,
+    why: 'Músicas podem ser protegidas por direitos autorais. É necessário verificar licenças e permissões de uso.'
+  },
+  {
+    q: 'Qual é a importância de definir objetivos antes de iniciar uma campanha digital?',
+    a: [
+      'Permitir avaliar se as ações realizadas alcançaram os resultados desejados',
+      'Impedir alterações durante a campanha',
+      'Garantir resultados sem considerar o público',
+      'Eliminar a necessidade de acompanhar métricas',
+      'Substituir a criação do conteúdo'
+    ],
+    c: 0,
+    why: 'Objetivos claros orientam as decisões e permitem avaliar o desempenho da campanha.'
+  },
+  {
+    q: 'Uma plataforma recomenda conteúdos com base no histórico de navegação do usuário. Qual tecnologia pode estar envolvida nesse processo?',
+    a: [
+      'Impressão 3D',
+      'Sistemas de recomendação que analisam dados e padrões de comportamento',
+      'Edição vetorial de imagens',
+      'Compactação de arquivos de áudio',
+      'Digitalização de documentos impressos'
+    ],
+    c: 1,
+    why: 'Sistemas de recomendação analisam dados e padrões para sugerir conteúdos que possam interessar ao usuário.'
+  }
 ];
   
   function feedback(id,msg){$(id).textContent=msg||'';}

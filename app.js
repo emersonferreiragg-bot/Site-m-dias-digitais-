@@ -1534,7 +1534,7 @@ async function nextQuestion(){
   quizCompleted=true;
   quizSaving=true;
 
-  const points=score*10;
+  const points=score*100;
 
   $('quiz-title').textContent=`Você acertou ${score} de ${quizQuestions.length}!`;
   $('quiz-content').innerHTML=`<p>Você ganhou <strong>${points} pontos</strong> neste quiz.</p>`;

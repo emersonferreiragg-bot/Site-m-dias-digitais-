@@ -96,6 +96,19 @@
     <button class="secondary-btn" id="content-back" type="button">
       Voltar aos conteúdos
     </button>
+    <dialog id="content-dialog" class="app-dialog">
+  <form method="dialog" class="dialog-close">
+    <button aria-label="Fechar">×</button>
+  </form>
+  <div class="dialog-inner">
+    <span class="eyebrow">CONTEÚDO DE APRENDIZAGEM</span>
+    <h2 id="content-title"></h2>
+    <div id="content-body"></div>
+    <button class="secondary-btn" id="content-back" type="button">
+      Voltar aos conteúdos
+    </button>
+  </div>
+</dialog>
   </div>
 </dialog><dialog id="quiz-dialog" class="app-dialog"><form method="dialog" class="dialog-close"><button aria-label="Fechar">×</button></form><div class="dialog-inner"><span class="eyebrow">QUIZ • MÍDIAS DIGITAIS</span><h2 id="quiz-title">Vamos testar seus conhecimentos?</h2><p id="quiz-progress">Pergunta 1 de 5</p><div id="quiz-content"></div><p class="form-feedback" id="quiz-feedback" role="status"></p><button class="primary-btn" id="quiz-next" type="button">Responder</button></div></dialog>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>

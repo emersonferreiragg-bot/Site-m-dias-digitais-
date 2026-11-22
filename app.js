@@ -15,6 +15,61 @@ let quizCompleted = false, quizSaving = false;
     {q:'Para que serve a inteligência artificial?',a:['Apenas para substituir a internet','Para executar tarefas que envolvem capacidades como reconhecer padrões e gerar conteúdo','Somente para editar fotografias'],c:1,why:'A IA pode apoiar várias tarefas, como análise, reconhecimento de padrões e geração de conteúdo.'}
   ];
   function feedback(id,msg){$(id).textContent=msg||'';}
+  const topics = {
+    fundamentos: {
+      title: 'Fundamentos das mídias digitais',
+      body: `
+        <h3>O que são mídias digitais?</h3>
+        <p>São meios que utilizam tecnologias digitais para criar, transmitir e compartilhar informações.</p>
+        <h3>Onde encontramos?</h3>
+        <p>Nas redes sociais, sites, aplicativos, blogs, vídeos e jogos.</p>
+        <h3>Por que são importantes?</h3>
+        <p>Facilitam o acesso à informação, a comunicação e o compartilhamento de conhecimentos.</p>
+      `
+    },
+    comunicacao: {
+      title: 'Redes e comunicação',
+      body: `
+        <h3>O que é comunicação digital?</h3>
+        <p>É a troca de informações por meio de ferramentas e plataformas digitais.</p>
+        <h3>Exemplos</h3>
+        <p>Redes sociais, aplicativos de mensagens, chamadas de vídeo e fóruns online.</p>
+        <h3>Qual sua importância?</h3>
+        <p>Ela aproxima pessoas, facilita a troca de ideias e permite compartilhar informações rapidamente.</p>
+      `
+    },
+    criatividade: {
+      title: 'Design e criatividade',
+      body: `
+        <h3>O que é design digital?</h3>
+        <p>É a criação e organização de elementos visuais em ambientes digitais.</p>
+        <h3>Elementos importantes</h3>
+        <p>Cores, imagens, tipografia, formas e organização dos elementos.</p>
+        <h3>Por que a criatividade importa?</h3>
+        <p>Ajuda a desenvolver soluções originais e criar conteúdos interessantes e atrativos.</p>
+      `
+    }
+  };
+
+  function showTopic(topic){
+    const content = topics[topic];
+    if(!content) return;
+
+    $('content-title').textContent = content.title;
+    $('content-body').innerHTML = content.body;
+    contentDialog.showModal();
+  }
+
+  function openTopic(topic){
+    if(!currentUser){
+      pendingTopic = topic;
+      feedback('auth-feedback','Entre na sua conta para acessar este conteúdo.');
+      authDialog.showModal();
+      return;
+    }
+
+    showTopic(topic);
+  }
   function init(){
     if(!window.supabase){console.warn('Biblioteca Supabase não carregou.');return;}
     if(!key || key.includes('COLE_AQUI')){console.warn('Configure a chave publicável em config.js.');return;}

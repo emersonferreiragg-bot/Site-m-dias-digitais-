@@ -68,6 +68,187 @@ let quizCompleted = false, quizSaving = false;
     c: 1,
     why: 'Sistemas de IA podem identificar padrões em grandes conjuntos de dados e utilizar esse aprendizado para reconhecer elementos em novas imagens.'
   }
+,
+  {
+    q: 'Qual é a principal função da hierarquia visual em um projeto gráfico?',
+    a: [
+      'Utilizar o maior número possível de fontes',
+      'Organizar os elementos para orientar a atenção do observador',
+      'Eliminar todos os espaços vazios',
+      'Deixar todos os elementos com o mesmo destaque',
+      'Substituir a necessidade de planejamento'
+    ],
+    c: 1,
+    why: 'A hierarquia visual organiza os elementos por importância e conduz o olhar do público.'
+  },
+  {
+    q: 'Em uma composição visual, o contraste é utilizado principalmente para:',
+    a: [
+      'Tornar todos os elementos visualmente iguais',
+      'Eliminar a identidade visual',
+      'Destacar diferenças e melhorar a percepção das informações',
+      'Impedir a leitura de textos',
+      'Reduzir obrigatoriamente a quantidade de cores'
+    ],
+    c: 2,
+    why: 'O contraste diferencia elementos e ajuda a destacar informações importantes.'
+  },
+  {
+    q: 'Qual alternativa apresenta um exemplo de comunicação assíncrona?',
+    a: [
+      'Uma chamada de vídeo ao vivo',
+      'Uma conversa telefônica',
+      'Uma reunião virtual em tempo real',
+      'O envio de um e-mail respondido algumas horas depois',
+      'Uma transmissão ao vivo com participação imediata'
+    ],
+    c: 3,
+    why: 'Na comunicação assíncrona, os participantes não precisam interagir no mesmo momento.'
+  },
+  {
+    q: 'Por que a tipografia deve ser escolhida considerando o público e a finalidade do projeto?',
+    a: [
+      'Porque todas as fontes possuem a mesma função',
+      'Porque a tipografia influencia a legibilidade e a comunicação da mensagem',
+      'Porque fontes decorativas sempre são mais acessíveis',
+      'Porque o tamanho do texto não interfere na leitura',
+      'Porque a tipografia substitui as imagens'
+    ],
+    c: 1,
+    why: 'A escolha tipográfica influencia a leitura, a organização e a personalidade visual do projeto.'
+  },
+  {
+    q: 'Uma imagem encontrada na internet pode ser utilizada livremente em qualquer trabalho?',
+    a: [
+      'Sim, desde que esteja disponível em um site',
+      'Sim, se não possuir marca-d’água',
+      'Não, é necessário considerar direitos autorais e condições de uso',
+      'Sim, desde que seja publicada em uma rede social',
+      'Não, imagens digitais nunca podem ser reutilizadas'
+    ],
+    c: 2,
+    why: 'Imagens podem possuir proteção autoral. É importante verificar licenças e permissões de utilização.'
+  },
+  {
+    q: 'Qual é a principal vantagem de utilizar um sistema de identidade visual consistente?',
+    a: [
+      'Impedir mudanças futuras na marca',
+      'Fazer cada material apresentar uma aparência completamente diferente',
+      'Facilitar o reconhecimento e manter unidade na comunicação da marca',
+      'Eliminar a necessidade de um logotipo',
+      'Garantir vendas independentemente do produto'
+    ],
+    c: 2,
+    why: 'A consistência visual ajuda o público a reconhecer e associar os materiais à mesma marca.'
+  },
+  {
+    q: 'O que caracteriza uma prática de phishing?',
+    a: [
+      'Uma atualização legítima do sistema',
+      'Uma tentativa de enganar alguém para obter informações confidenciais',
+      'Uma técnica de organização de arquivos',
+      'Um método de compactação de imagens',
+      'Uma ferramenta de edição de vídeos'
+    ],
+    c: 1,
+    why: 'O phishing utiliza mensagens ou páginas falsas para tentar roubar senhas e outros dados.'
+  },
+  {
+    q: 'Em um projeto de design, qual é a função principal do alinhamento?',
+    a: [
+      'Organizar os elementos e criar relações visuais entre eles',
+      'Aumentar aleatoriamente os tamanhos dos objetos',
+      'Eliminar a distribuição dos elementos',
+      'Utilizar somente imagens centralizadas',
+      'Substituir o contraste por cores semelhantes'
+    ],
+    c: 0,
+    why: 'O alinhamento cria organização e conexão visual entre os elementos de uma composição.'
+  },
+  {
+    q: 'Qual atitude contribui para uma comunicação mais acessível nas mídias digitais?',
+    a: [
+      'Utilizar textos pequenos e com pouco contraste',
+      'Publicar vídeos sem considerar legendas',
+      'Organizar informações e oferecer recursos como textos alternativos e legendas',
+      'Utilizar apenas cores para transmitir todas as informações',
+      'Evitar descrições em imagens'
+    ],
+    c: 2,
+    why: 'Recursos de acessibilidade ajudam pessoas com diferentes necessidades a compreender o conteúdo.'
+  },
+  {
+    q: 'Qual é o papel do briefing no desenvolvimento de um projeto de design?',
+    a: [
+      'Definir apenas as cores finais',
+      'Substituir todas as etapas de criação',
+      'Reunir informações sobre objetivos, público e necessidades do projeto',
+      'Garantir que não haverá alterações',
+      'Escolher automaticamente o programa utilizado'
+    ],
+    c: 2,
+    why: 'O briefing orienta o projeto ao reunir informações essenciais sobre o problema e os objetivos.'
+  },
+  {
+    q: 'Uma publicação possui muitas informações, cores e elementos competindo pela atenção. Qual princípio pode ajudar a melhorar sua organização?',
+    a: [
+      'Hierarquia visual',
+      'Repetição aleatória',
+      'Excesso de ornamentação',
+      'Ausência de alinhamento',
+      'Redução obrigatória de todas as fontes'
+    ],
+    c: 0,
+    why: 'A hierarquia visual estabelece prioridades e facilita a compreensão da mensagem.'
+  },
+  {
+    q: 'Qual é uma limitação importante que deve ser considerada ao utilizar inteligência artificial para produzir conteúdo?',
+    a: [
+      'A IA nunca consegue gerar textos',
+      'Todo conteúdo produzido é automaticamente verdadeiro',
+      'A IA pode apresentar informações incorretas ou inventadas',
+      'A IA funciona somente sem dados',
+      'O conteúdo gerado não pode ser revisado'
+    ],
+    c: 2,
+    why: 'Conteúdos gerados por IA precisam ser avaliados e verificados antes de serem utilizados.'
+  },
+  {
+    q: 'Qual situação representa melhor o uso de metodologias ativas na aprendizagem?',
+    a: [
+      'O estudante apenas copia o conteúdo sem participar',
+      'O professor apresenta informações sem atividades',
+      'O estudante resolve problemas e participa da construção do conhecimento',
+      'A turma evita qualquer atividade em grupo',
+      'O aprendizado depende exclusivamente da memorização'
+    ],
+    c: 2,
+    why: 'Metodologias ativas estimulam a participação e o envolvimento do estudante no processo de aprendizagem.'
+  },
+  {
+    q: 'Por que é importante considerar o público-alvo antes de criar uma publicação digital?',
+    a: [
+      'Para utilizar sempre a mesma linguagem em qualquer situação',
+      'Para adaptar linguagem, formato e conteúdo às necessidades do público',
+      'Para evitar qualquer tipo de planejamento',
+      'Para escolher elementos visuais sem objetivo',
+      'Para eliminar a identidade da comunicação'
+    ],
+    c: 1,
+    why: 'Conhecer o público ajuda a produzir mensagens mais relevantes, compreensíveis e adequadas.'
+  },
+  {
+    q: 'Qual alternativa descreve melhor a diferença entre resolução e formato de imagem?',
+    a: [
+      'São exatamente a mesma característica',
+      'Resolução está relacionada à quantidade de detalhes; formato define como o arquivo é codificado e armazenado',
+      'Formato determina exclusivamente o tamanho físico da tela',
+      'Resolução define apenas as cores disponíveis',
+      'Formato é utilizado somente em arquivos de áudio'
+    ],
+    c: 1,
+    why: 'A resolução influencia o nível de detalhes da imagem, enquanto formatos como JPEG e PNG definem formas de armazenamento.'
+  }
 ];
   function feedback(id,msg){$(id).textContent=msg||'';}
   const topics = {

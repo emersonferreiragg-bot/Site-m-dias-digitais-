@@ -1351,21 +1351,65 @@ let quizCompleted = false, quizSaving = false;
     refreshProfile(); loadRanking();
   }
   async function refreshProfile(){
-    if(!supabase)return;
-    const {data:{user}}=await supabase.auth.getUser(); currentUser=user;
-    if(user){
-      $('profile-title').textContent=user.user_metadata?.full_name||user.email||'Estudante';
-      $('profile-description').textContent='Sua conta está conectada. Seus resultados e pontos ficam associados a este perfil.';
-      $('profile-action').textContent='Gerenciar conta';
-$('open-auth').hidden=true;
-$('logout-btn').hidden=false;
-      const {data}=await supabase.from('profiles').select('display_name,total_points,quiz_count').eq('id',user.id).maybeSingle();
-      if(data){$('profile-title').textContent=data.display_name||$('profile-title').textContent;$('profile-points').textContent=data.total_points??0;$('profile-quizzes').textContent=data.quiz_count??0;}
-    }else{
-      $('profile-title').textContent='Seu perfil';$('profile-description').textContent='Entre ou crie uma conta para salvar seus pontos e acompanhar sua evolução.';$('profile-action').textContent='Entrar / Criar conta';$('open-auth').hidden=false;$('profile-points').textContent='0';$('profile-quizzes').textContent='0';$('logout-btn').hidden=true;
+  if(!supabase)return;
+
+  const {data:{user}}=await supabase.auth.getUser();
+  currentUser=user;
+
+  const avatarImage=$('profile-avatar-image');
+  const avatarFallback=$('profile-avatar-fallback');
+
+  if(user){
+    $('profile-title').textContent=user.user_metadata?.full_name||user.email||'Estudante';
+    $('profile-description').textContent='Sua conta está conectada. Seus resultados e pontos ficam associados a este perfil.';
+    $('profile-action').textContent='Gerenciar conta';
+    $('open-auth').hidden=true;
+    $('logout-btn').hidden=false;
+
+    const {data}=await supabase
+      .from('profiles')
+      .select('display_name,total_points,quiz_count')
+      .eq('id',user.id)
+      .maybeSingle();
+
+    if(data){
+      $('profile-title').textContent=data.display_name||$('profile-title').textContent;
+      $('profile-points').textContent=data.total_points??0;
+      $('profile-quizzes').textContent=data.quiz_count??0;
     }
-    loadRanking();
+
+    const avatarPath=user.user_metadata?.avatar_path;
+
+    if(avatarPath){
+      const {data:avatarData}=supabase.storage
+        .from('avatars')
+        .getPublicUrl(avatarPath);
+
+      avatarImage.src=avatarData.publicUrl;
+      avatarImage.hidden=false;
+      avatarFallback.hidden=true;
+    }else{
+      avatarImage.hidden=true;
+      avatarImage.removeAttribute('src');
+      avatarFallback.hidden=false;
+    }
+
+  }else{
+    $('profile-title').textContent='Seu perfil';
+    $('profile-description').textContent='Entre ou crie uma conta para salvar seus pontos e acompanhar sua evolução.';
+    $('profile-action').textContent='Entrar / Criar conta';
+    $('open-auth').hidden=false;
+    $('profile-points').textContent='0';
+    $('profile-quizzes').textContent='0';
+    $('logout-btn').hidden=true;
+
+    avatarImage.hidden=true;
+    avatarImage.removeAttribute('src');
+    avatarFallback.hidden=false;
   }
+
+  loadRanking();
+}
   async function signUp(){
     if(!supabase)return feedback('auth-feedback','Configure a chave publicável no arquivo config.js primeiro.');
     const name=$('auth-name').value.trim(),email=$('auth-email').value.trim(),password=$('auth-password').value;

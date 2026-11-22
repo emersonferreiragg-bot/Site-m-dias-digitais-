@@ -1456,11 +1456,11 @@ async function nextQuestion(){
     });
 
     feedback('quiz-feedback',(correct?'Resposta correta! ':'Não foi dessa vez. ')+q.why);
-    $('quiz-next').textContent=quizIndex===questions.length-1?'Finalizar':'Próxima pergunta';
+    $('quiz-next').textContent=quizIndex===quizQuestions.length-1?'Finalizar':'Próxima pergunta';
     return;
   }
 
-  if(quizIndex<questions.length-1){
+  if(quizIndex<quizQuestions.length-1){
     quizIndex++;
     renderQuestion();
     return;
@@ -1471,7 +1471,7 @@ async function nextQuestion(){
 
   const points=score*10;
 
-  $('quiz-title').textContent=`Você acertou ${score} de ${questions.length}!`;
+  $('quiz-title').textContent=`Você acertou ${score} de ${quizQuestions.length}!`;
   $('quiz-content').innerHTML=`<p>Você ganhou <strong>${points} pontos</strong> neste quiz.</p>`;
   $('quiz-progress').textContent='Resultado final';
   $('quiz-next').textContent='Concluir';
@@ -1484,7 +1484,7 @@ async function nextQuestion(){
       quiz_code:'fundamentos-midias-digitais',
       score:score,
       points:points,
-      total_questions:questions.length
+      total_questions:quizQuestions.length
     });
 
     if(error){

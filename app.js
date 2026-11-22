@@ -1418,6 +1418,20 @@ setTimeout(()=>{
 
   return copy;
 }
+  function shuffleQuestion(q) {
+  const options = q.a.map((text, index) => ({
+    text,
+    correct: index === q.c
+  }));
+
+  const shuffled = shuffleArray(options);
+
+  return {
+    ...q,
+    a: shuffled.map(item => item.text),
+    c: shuffled.findIndex(item => item.correct)
+  };
+}
 function startQuiz(){
   quizIndex=0;
   score=0;

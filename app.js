@@ -7,6 +7,7 @@
 let pendingTopic = null;
   let supabase = null, currentUser = null, quizIndex = 0, selected = null, score = 0, answered = false;
 let quizCompleted = false, quizSaving = false;
+  let quizQuestions = [];
   const questions = [
   {
     q: 'Qual característica diferencia principalmente as mídias digitais das mídias tradicionais?',

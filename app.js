@@ -248,8 +248,261 @@ let quizCompleted = false, quizSaving = false;
     ],
     c: 1,
     why: 'A resolução influencia o nível de detalhes da imagem, enquanto formatos como JPEG e PNG definem formas de armazenamento.'
+  },
+  {
+    q: 'Uma empresa deseja criar uma identidade visual facilmente reconhecida pelo público. Qual decisão contribui mais para esse objetivo?',
+    a: [
+      'Alterar completamente as cores em cada publicação',
+      'Utilizar elementos visuais consistentes em diferentes materiais',
+      'Evitar qualquer padrão de composição',
+      'Usar fontes diferentes em todas as peças',
+      'Eliminar o logotipo dos materiais'
+    ],
+    c: 1,
+    why: 'A consistência dos elementos visuais fortalece o reconhecimento e a identidade de uma marca.'
+  },
+  {
+    q: 'Qual é a principal diferença entre imagens vetoriais e imagens rasterizadas?',
+    a: [
+      'Imagens vetoriais são sempre fotografias',
+      'Imagens rasterizadas nunca podem ser editadas',
+      'Imagens vetoriais podem ser ampliadas sem perda de qualidade, enquanto rasterizadas dependem de pixels',
+      'Imagens rasterizadas são formadas exclusivamente por linhas matemáticas',
+      'Não existe diferença entre os dois formatos'
+    ],
+    c: 2,
+    why: 'Imagens vetoriais são descritas matematicamente; imagens rasterizadas são compostas por pixels.'
+  },
+  {
+    q: 'Em uma página com muito conteúdo, qual recurso ajuda o usuário a encontrar informações com maior facilidade?',
+    a: [
+      'Organização por títulos, categorias e menus claros',
+      'Textos longos sem separação',
+      'Botões sem identificação',
+      'Elementos posicionados aleatoriamente',
+      'Ausência de navegação'
+    ],
+    c: 0,
+    why: 'Uma estrutura organizada facilita a localização das informações e melhora a experiência do usuário.'
+  },
+  {
+    q: 'O que significa experiência do usuário (UX) no desenvolvimento de um site?',
+    a: [
+      'Apenas a escolha das cores da página',
+      'A quantidade de imagens utilizadas',
+      'A experiência geral de uma pessoa ao utilizar o produto ou serviço',
+      'Somente a velocidade da conexão de internet',
+      'A programação visual do logotipo'
+    ],
+    c: 2,
+    why: 'UX considera a experiência completa do usuário, incluindo facilidade de uso, eficiência e satisfação.'
+  },
+  {
+    q: 'Qual alternativa representa uma boa prática de proteção de dados pessoais?',
+    a: [
+      'Publicar documentos pessoais em redes sociais',
+      'Compartilhar códigos de autenticação com desconhecidos',
+      'Fornecer dados pessoais apenas quando necessário e em serviços confiáveis',
+      'Utilizar redes públicas para acessar qualquer conta sem cuidado',
+      'Manter todas as informações pessoais visíveis'
+    ],
+    c: 2,
+    why: 'Limitar o compartilhamento de dados reduz a exposição e os riscos relacionados à privacidade.'
+  },
+  {
+    q: 'Uma mensagem apresenta um link urgente solicitando a confirmação da senha de uma conta. Qual atitude é mais segura?',
+    a: [
+      'Acessar imediatamente o link',
+      'Enviar a senha para confirmar a identidade',
+      'Verificar a solicitação pelos canais oficiais do serviço',
+      'Encaminhar a mensagem para todos os contatos',
+      'Desativar o antivírus para abrir o endereço'
+    ],
+    c: 2,
+    why: 'Solicitações suspeitas devem ser verificadas diretamente nos canais oficiais, sem fornecer credenciais por links desconhecidos.'
+  },
+  {
+    q: 'Qual é a finalidade principal de uma licença Creative Commons?',
+    a: [
+      'Impedir qualquer compartilhamento de conteúdo',
+      'Estabelecer condições para que outras pessoas utilizem uma obra',
+      'Garantir que toda obra seja de domínio público',
+      'Eliminar automaticamente os direitos autorais',
+      'Proibir a identificação do autor'
+    ],
+    c: 1,
+    why: 'As licenças Creative Commons permitem que autores definam condições específicas de reutilização de suas obras.'
+  },
+  {
+    q: 'Ao produzir um vídeo educativo, por que é importante organizar um roteiro antes da gravação?',
+    a: [
+      'Para impedir alterações durante a edição',
+      'Para garantir que o vídeo tenha sempre a mesma duração',
+      'Para organizar ideias, sequência das informações e objetivo da mensagem',
+      'Para eliminar a necessidade de revisar o conteúdo',
+      'Para substituir completamente a edição'
+    ],
+    c: 2,
+    why: 'O roteiro ajuda a estruturar o conteúdo e manter a comunicação clara e coerente.'
+  },
+  {
+    q: 'Qual situação demonstra o uso adequado de contraste entre texto e fundo?',
+    a: [
+      'Texto amarelo sobre fundo branco',
+      'Texto cinza claro sobre fundo branco',
+      'Texto escuro sobre fundo claro, com diferença suficiente para facilitar a leitura',
+      'Texto com a mesma cor do fundo',
+      'Texto transparente sobre uma fotografia'
+    ],
+    c: 2,
+    why: 'Um contraste adequado melhora a legibilidade e facilita o acesso à informação.'
+  },
+  {
+    q: 'Em uma publicação digital, qual é o risco de utilizar informações sem verificar sua autoria e origem?',
+    a: [
+      'Aumentar automaticamente a qualidade visual',
+      'Divulgar conteúdos incorretos ou violar direitos autorais',
+      'Melhorar a acessibilidade do material',
+      'Garantir maior credibilidade',
+      'Reduzir a necessidade de planejamento'
+    ],
+    c: 1,
+    why: 'A falta de verificação pode contribuir para a desinformação e para o uso indevido de obras.'
+  },
+  {
+    q: 'Qual é a função de um protótipo no desenvolvimento de uma interface digital?',
+    a: [
+      'Substituir definitivamente o produto final',
+      'Permitir testar a estrutura e a navegação antes da implementação completa',
+      'Impedir mudanças no projeto',
+      'Definir automaticamente o conteúdo de todas as páginas',
+      'Eliminar a necessidade de ouvir os usuários'
+    ],
+    c: 1,
+    why: 'Protótipos permitem avaliar ideias e identificar problemas antes do desenvolvimento final.'
+  },
+  {
+    q: 'Qual indicador mede diretamente a proporção de pessoas que clicaram em um link em relação às visualizações de uma publicação?',
+    a: [
+      'Taxa de cliques (CTR)',
+      'Resolução da imagem',
+      'Quantidade de fontes utilizadas',
+      'Tempo de carregamento do computador',
+      'Número de arquivos armazenados'
+    ],
+    c: 0,
+    why: 'A taxa de cliques relaciona o número de cliques com as impressões ou visualizações consideradas.'
+  },
+  {
+    q: 'Uma publicação recebe muitos comentários negativos. Qual atitude representa uma gestão responsável da comunicação?',
+    a: [
+      'Apagar todas as críticas automaticamente',
+      'Responder com ofensas aos usuários',
+      'Analisar as manifestações e responder com respeito e transparência',
+      'Compartilhar dados pessoais dos críticos',
+      'Ignorar qualquer problema relatado'
+    ],
+    c: 2,
+    why: 'Uma comunicação responsável considera críticas, esclarece dúvidas e mantém o respeito nas interações.'
+  },
+  {
+    q: 'Por que a compressão de imagens é utilizada em sites?',
+    a: [
+      'Para aumentar obrigatoriamente a resolução',
+      'Para reduzir o tamanho dos arquivos e ajudar no carregamento das páginas',
+      'Para transformar imagens em arquivos de áudio',
+      'Para eliminar todas as cores',
+      'Para impedir a exibição em celulares'
+    ],
+    c: 1,
+    why: 'A compressão pode diminuir o tamanho dos arquivos e contribuir para páginas mais rápidas.'
+  },
+  {
+    q: 'Qual alternativa descreve melhor o conceito de desinformação?',
+    a: [
+      'Qualquer informação publicada em um site',
+      'Informação falsa ou enganosa que pode ser divulgada para confundir ou manipular pessoas',
+      'Uma notícia verdadeira publicada por um jornal',
+      'Uma opinião pessoal identificada como opinião',
+      'Um conteúdo educativo com referências'
+    ],
+    c: 1,
+    why: 'Desinformação envolve conteúdos falsos ou enganosos que podem influenciar a percepção das pessoas.'
+  },
+  {
+    q: 'Em um projeto gráfico, por que o espaço em branco é importante?',
+    a: [
+      'Porque representa necessariamente um erro de composição',
+      'Porque impede a leitura de textos',
+      'Porque ajuda a organizar os elementos e melhora a compreensão visual',
+      'Porque deve ocupar sempre a maior parte da página',
+      'Porque substitui todos os elementos gráficos'
+    ],
+    c: 2,
+    why: 'O espaço em branco cria respiro visual, separa informações e contribui para a organização da composição.'
+  },
+  {
+    q: 'Qual é a principal finalidade de uma chamada para ação (CTA) em uma publicação digital?',
+    a: [
+      'Apresentar informações sem orientar o usuário',
+      'Estimular o usuário a realizar uma ação específica',
+      'Substituir todo o conteúdo visual',
+      'Impedir a interação com a publicação',
+      'Aumentar o tamanho dos arquivos'
+    ],
+    c: 1,
+    why: 'Uma CTA orienta o público para uma ação, como acessar um site, inscrever-se ou conhecer um produto.'
+  },
+  {
+    q: 'Ao utilizar inteligência artificial para criar uma imagem, qual cuidado deve ser considerado?',
+    a: [
+      'Considerar que toda imagem gerada é livre de restrições',
+      'Ignorar possíveis vieses e direitos relacionados ao conteúdo utilizado',
+      'Publicar o resultado sem qualquer avaliação',
+      'Presumir que a ferramenta nunca comete erros',
+      'Evitar informar que houve uso de IA em qualquer situação'
+    ],
+    c: 1,
+    why: 'É importante avaliar resultados, possíveis vieses, direitos envolvidos e regras aplicáveis ao uso do conteúdo.'
+  },
+  {
+    q: 'Qual princípio de design ajuda a manter elementos relacionados visualmente próximos?',
+    a: [
+      'Proximidade',
+      'Distorção',
+      'Fragmentação',
+      'Aleatoriedade',
+      'Saturação'
+    ],
+    c: 0,
+    why: 'O princípio da proximidade agrupa elementos relacionados e facilita a compreensão das informações.'
+  },
+  {
+    q: 'Qual é uma vantagem de utilizar formatos responsivos no desenvolvimento de sites?',
+    a: [
+      'Exibir exatamente a mesma disposição em qualquer tela',
+      'Adaptar a apresentação do conteúdo a diferentes tamanhos de dispositivos',
+      'Impedir o acesso por celulares',
+      'Eliminar a necessidade de navegação',
+      'Aumentar obrigatoriamente o consumo de dados'
+    ],
+    c: 1,
+    why: 'O design responsivo adapta a interface a diferentes telas, melhorando a experiência em celulares, tablets e computadores.'
+  },
+  {
+    q: 'Qual atitude ajuda a evitar conflitos durante uma colaboração em ambientes digitais?',
+    a: [
+      'Ignorar as contribuições dos participantes',
+      'Alterar arquivos compartilhados sem comunicar o grupo',
+      'Estabelecer regras de comunicação e respeitar as opiniões dos colaboradores',
+      'Compartilhar conversas privadas sem autorização',
+      'Impedir que os integrantes apresentem sugestões'
+    ],
+    c: 2,
+    why: 'A colaboração digital depende de comunicação clara, respeito e organização entre os participantes.'
   }
 ];
+  
   function feedback(id,msg){$(id).textContent=msg||'';}
   const topics = {
     fundamentos: {

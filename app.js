@@ -1400,6 +1400,33 @@ setTimeout(()=>{
   }
 },700);
   }
+  async function resendConfirmationEmail(){
+  if(!supabase){
+    return feedback('auth-feedback','Serviço de autenticação indisponível.');
+  }
+
+  const email=$('auth-email').value.trim();
+
+  if(!email){
+    return feedback('auth-feedback','Informe seu e-mail para reenviar a confirmação.');
+  }
+
+  feedback('auth-feedback','Enviando e-mail de confirmação...');
+
+  const {error}=await supabase.auth.resend({
+    type:'signup',
+    email,
+    options:{
+      emailRedirectTo:window.location.origin + window.location.pathname
+    }
+  });
+
+  if(error){
+    return feedback('auth-feedback','Não foi possível reenviar: '+error.message);
+  }
+
+  feedback('auth-feedback','Solicitação enviada! Verifique sua caixa de entrada e a pasta de spam.');
+}
   async function signOut(){if(supabase){await supabase.auth.signOut();feedback('auth-feedback','Você saiu da conta.');await refreshProfile();}}
   async function loadRanking(){
     if(!supabase)return;const {data,error}=await supabase.rpc('get_public_leaderboard');

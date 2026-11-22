@@ -1402,6 +1402,29 @@ setTimeout(()=>{
   }
 },700);
   }
+  async function forgotPassword(){
+  if(!supabase){
+    return feedback('auth-feedback','Serviço de autenticação indisponível.');
+  }
+
+  const email = $('auth-email').value.trim();
+
+  if(!email){
+    return feedback('auth-feedback','Informe seu e-mail para recuperar a senha.');
+  }
+
+  feedback('auth-feedback','Enviando solicitação...');
+
+  const {error} = await supabase.auth.resetPasswordForEmail(email,{
+    redirectTo: window.location.origin + window.location.pathname
+  });
+
+  if(error){
+    return feedback('auth-feedback','Erro ao solicitar recuperação: '+error.message);
+  }
+
+  feedback('auth-feedback','Solicitação enviada. Verifique seu e-mail.');
+}
   async function resendConfirmationEmail(){
   if(!supabase){
     return feedback('auth-feedback','Serviço de autenticação indisponível.');

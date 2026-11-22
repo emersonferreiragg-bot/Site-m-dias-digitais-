@@ -971,6 +971,247 @@ let quizCompleted = false, quizSaving = false;
     c: 1,
     why: 'O teste A/B compara versões diferentes para avaliar qual apresenta melhor desempenho em determinado objetivo.'
   }
+,
+  {
+    q: 'Uma equipe está desenvolvendo um site educacional e percebe que os usuários não encontram facilmente os conteúdos. Qual mudança seria mais adequada?',
+    a: [
+      'Adicionar mais elementos decorativos à página inicial',
+      'Reorganizar a navegação com categorias claras e títulos objetivos',
+      'Retirar todos os menus',
+      'Diminuir o contraste dos textos',
+      'Colocar todos os conteúdos em uma única página sem divisões'
+    ],
+    c: 1,
+    why: 'Uma navegação organizada facilita a localização dos conteúdos e melhora a experiência dos usuários.'
+  },
+  {
+    q: 'Qual é a principal finalidade de um guia de estilo em um projeto de design digital?',
+    a: [
+      'Definir padrões visuais e regras de utilização dos elementos da identidade',
+      'Substituir todas as pesquisas com usuários',
+      'Impedir a criação de novas páginas',
+      'Armazenar exclusivamente arquivos de vídeo',
+      'Determinar automaticamente o conteúdo textual'
+    ],
+    c: 0,
+    why: 'O guia de estilo documenta padrões de cores, tipografia, componentes e outros elementos visuais.'
+  },
+  {
+    q: 'Uma publicação apresenta um gráfico sem indicar a escala do eixo vertical. Qual problema isso pode causar?',
+    a: [
+      'Melhorar automaticamente a precisão dos dados',
+      'Dificultar a interpretação e produzir uma percepção distorcida das diferenças',
+      'Aumentar a acessibilidade do gráfico',
+      'Eliminar a necessidade de apresentar a fonte',
+      'Garantir que todos compreendam os resultados'
+    ],
+    c: 1,
+    why: 'Escalas inadequadas ou ausentes podem dificultar a leitura e levar a interpretações equivocadas.'
+  },
+  {
+    q: 'Qual prática ajuda a tornar uma senha mais resistente a tentativas de descoberta?',
+    a: [
+      'Utilizar apenas o nome e a data de nascimento',
+      'Repetir uma senha curta em diferentes serviços',
+      'Criar uma senha longa, exclusiva e difícil de adivinhar',
+      'Compartilhar a senha com pessoas próximas',
+      'Utilizar sequências simples como 123456'
+    ],
+    c: 2,
+    why: 'Senhas longas e exclusivas dificultam ataques e reduzem o impacto de vazamentos entre serviços.'
+  },
+  {
+    q: 'Qual é a função de um certificado digital TLS em um site?',
+    a: [
+      'Garantir que todas as informações publicadas sejam verdadeiras',
+      'Permitir uma conexão criptografada e ajudar a autenticar a identidade do site',
+      'Eliminar a necessidade de senhas',
+      'Aumentar a resolução das imagens',
+      'Impedir todos os tipos de ataques digitais'
+    ],
+    c: 1,
+    why: 'O TLS protege a comunicação entre navegador e servidor. Ele não garante que o conteúdo do site seja verdadeiro ou seguro em todos os aspectos.'
+  },
+  {
+    q: 'Em uma campanha, o público visualiza uma publicação, mas não realiza a ação desejada. Qual elemento pode precisar de revisão?',
+    a: [
+      'A chamada para ação e a clareza da proposta apresentada',
+      'A extensão do nome do arquivo',
+      'A quantidade de pastas no computador',
+      'O sistema operacional utilizado pelo designer',
+      'A resolução da tela do criador'
+    ],
+    c: 0,
+    why: 'Uma chamada para ação clara e uma proposta relevante ajudam o público a compreender o próximo passo.'
+  },
+  {
+    q: 'Qual é a diferença entre dados quantitativos e qualitativos em uma pesquisa com usuários?',
+    a: [
+      'Quantitativos descrevem opiniões; qualitativos apresentam apenas números',
+      'Quantitativos envolvem medidas numéricas; qualitativos exploram características, opiniões e experiências',
+      'Ambos representam exclusivamente porcentagens',
+      'Qualitativos não podem ser analisados',
+      'Quantitativos são utilizados somente em pesquisas impressas'
+    ],
+    c: 1,
+    why: 'Dados quantitativos podem ser medidos numericamente, enquanto dados qualitativos ajudam a compreender percepções e experiências.'
+  },
+  {
+    q: 'Uma equipe utiliza imagens muito pesadas em uma página. Qual consequência pode ocorrer?',
+    a: [
+      'O carregamento pode ficar mais lento, especialmente em conexões limitadas',
+      'A página ficará automaticamente mais acessível',
+      'O site deixará de utilizar cores',
+      'O conteúdo será convertido em áudio',
+      'A segurança será garantida'
+    ],
+    c: 0,
+    why: 'Arquivos grandes podem aumentar o tempo de carregamento e prejudicar a experiência dos visitantes.'
+  },
+  {
+    q: 'Qual alternativa descreve corretamente o conceito de design centrado no usuário?',
+    a: [
+      'Desenvolver produtos considerando necessidades, limitações e objetivos das pessoas',
+      'Criar interfaces somente com base na preferência do desenvolvedor',
+      'Priorizar efeitos visuais independentemente da funcionalidade',
+      'Evitar pesquisas e testes durante o desenvolvimento',
+      'Utilizar o mesmo projeto para qualquer público'
+    ],
+    c: 0,
+    why: 'O design centrado no usuário considera as pessoas durante as decisões de projeto e busca atender às suas necessidades.'
+  },
+  {
+    q: 'Por que a revisão humana é importante em conteúdos produzidos com inteligência artificial?',
+    a: [
+      'Porque a IA não consegue produzir nenhum tipo de texto',
+      'Porque permite verificar precisão, contexto, coerência e possíveis problemas',
+      'Porque transforma automaticamente qualquer conteúdo em informação científica',
+      'Porque elimina a necessidade de fontes',
+      'Porque impede qualquer alteração posterior'
+    ],
+    c: 1,
+    why: 'A revisão humana ajuda a identificar erros, informações inventadas e inadequações no conteúdo gerado.'
+  },
+  {
+    q: 'Qual característica diferencia um arquivo SVG de uma imagem JPEG?',
+    a: [
+      'SVG é um formato vetorial baseado em elementos gráficos; JPEG é um formato rasterizado',
+      'JPEG é utilizado exclusivamente para áudio',
+      'SVG não pode representar formas geométricas',
+      'JPEG permite ampliar imagens infinitamente sem perda',
+      'Os dois formatos são necessariamente idênticos'
+    ],
+    c: 0,
+    why: 'SVG descreve elementos vetoriais, enquanto JPEG armazena imagens rasterizadas comprimidas.'
+  },
+  {
+    q: 'Qual é a importância de estabelecer uma grade (grid) em uma composição gráfica?',
+    a: [
+      'Criar referências de alinhamento e organizar a distribuição dos elementos',
+      'Impedir o uso de imagens',
+      'Definir obrigatoriamente uma única cor',
+      'Eliminar os espaços entre elementos',
+      'Substituir o conteúdo textual'
+    ],
+    c: 0,
+    why: 'A grade fornece uma estrutura que facilita o alinhamento, a consistência e a organização visual.'
+  },
+  {
+    q: 'Uma pessoa compartilha uma fotografia de outra pessoa sem autorização, expondo informações privadas. Qual questão está principalmente envolvida?',
+    a: [
+      'Compressão de arquivos',
+      'Privacidade e proteção de dados pessoais',
+      'Resolução de tela',
+      'Hierarquia tipográfica',
+      'Otimização de mecanismos de busca'
+    ],
+    c: 1,
+    why: 'A exposição indevida de imagens e informações pode violar a privacidade e direitos da pessoa retratada.'
+  },
+  {
+    q: 'Qual é o objetivo principal da otimização para mecanismos de busca (SEO)?',
+    a: [
+      'Melhorar a possibilidade de um conteúdo ser encontrado nos resultados de busca',
+      'Impedir que páginas sejam indexadas',
+      'Substituir a criação de conteúdo',
+      'Aumentar exclusivamente o tamanho das imagens',
+      'Garantir a primeira posição em qualquer pesquisa'
+    ],
+    c: 0,
+    why: 'SEO reúne práticas que ajudam mecanismos de busca a compreender e apresentar páginas relevantes. Não garante uma posição específica.'
+  },
+  {
+    q: 'Qual situação demonstra uma utilização inadequada de métricas digitais?',
+    a: [
+      'Comparar resultados com objetivos previamente definidos',
+      'Analisar diferentes indicadores em conjunto',
+      'Considerar apenas curtidas como prova de sucesso, independentemente do objetivo',
+      'Avaliar a evolução dos resultados ao longo do tempo',
+      'Identificar quais conteúdos geram mais interação'
+    ],
+    c: 2,
+    why: 'Uma métrica isolada pode não representar o sucesso de uma ação. Os indicadores devem ser relacionados aos objetivos.'
+  },
+  {
+    q: 'Qual é a finalidade de utilizar um sistema de controle de versão em um projeto digital?',
+    a: [
+      'Registrar alterações no código e permitir acompanhar ou recuperar versões anteriores',
+      'Eliminar automaticamente todos os erros',
+      'Substituir a hospedagem do site',
+      'Impedir o trabalho em equipe',
+      'Converter imagens em vídeos'
+    ],
+    c: 0,
+    why: 'O controle de versão registra mudanças e facilita a colaboração e a recuperação de versões anteriores.'
+  },
+  {
+    q: 'Por que é importante utilizar linguagem simples em conteúdos educativos digitais?',
+    a: [
+      'Para eliminar todos os conceitos técnicos',
+      'Para facilitar a compreensão sem comprometer a precisão das informações',
+      'Para reduzir obrigatoriamente o número de páginas',
+      'Para impedir o aprofundamento dos assuntos',
+      'Para tornar todos os textos informais'
+    ],
+    c: 1,
+    why: 'A linguagem simples facilita o entendimento e pode tornar o conteúdo mais acessível a diferentes públicos.'
+  },
+  {
+    q: 'Qual é a função de um teste de acessibilidade em uma plataforma digital?',
+    a: [
+      'Verificar barreiras que possam dificultar o uso por pessoas com diferentes necessidades',
+      'Medir exclusivamente a velocidade da internet',
+      'Avaliar somente a aparência do logotipo',
+      'Determinar o preço de venda do aplicativo',
+      'Substituir todos os testes funcionais'
+    ],
+    c: 0,
+    why: 'Testes de acessibilidade ajudam a identificar obstáculos de navegação, leitura e interação.'
+  },
+  {
+    q: 'Uma equipe deseja reduzir o abandono durante o cadastro. Qual abordagem é mais adequada?',
+    a: [
+      'Solicitar o máximo possível de informações sem explicar o motivo',
+      'Simplificar o formulário e solicitar apenas os dados necessários',
+      'Adicionar etapas obrigatórias sem necessidade',
+      'Esconder as instruções de preenchimento',
+      'Retirar mensagens de confirmação'
+    ],
+    c: 1,
+    why: 'Formulários mais simples e objetivos reduzem dificuldades e evitam a coleta desnecessária de informações.'
+  },
+  {
+    q: 'Qual princípio deve orientar a publicação de um conteúdo educativo sobre segurança digital?',
+    a: [
+      'Apresentar recomendações claras, verificáveis e adequadas ao público',
+      'Utilizar informações alarmistas para chamar atenção',
+      'Omitir limitações e possíveis riscos',
+      'Reproduzir orientações sem verificar sua origem',
+      'Garantir proteção absoluta contra qualquer ameaça'
+    ],
+    c: 0,
+    why: 'Conteúdos educativos sobre segurança devem ser claros, responsáveis e baseados em orientações confiáveis.'
+  }
 ];
   
   function feedback(id,msg){$(id).textContent=msg||'';}

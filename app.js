@@ -8,12 +8,67 @@ let pendingTopic = null;
   let supabase = null, currentUser = null, quizIndex = 0, selected = null, score = 0, answered = false;
 let quizCompleted = false, quizSaving = false;
   const questions = [
-    {q:'O que são mídias digitais?',a:['Meios digitais usados para criar e compartilhar informações','Somente jornais impressos','Apenas aparelhos de televisão'],c:0,why:'Mídias digitais envolvem meios e tecnologias digitais de criação, circulação e consumo de informações.'},
-    {q:'Qual atitude ajuda a proteger sua conta?',a:['Usar a mesma senha em todos os sites','Criar uma senha forte e exclusiva','Compartilhar a senha com colegas'],c:1,why:'Senhas fortes e exclusivas reduzem o risco de invasão.'},
-    {q:'Antes de compartilhar uma notícia, o ideal é:',a:['Verificar a fonte e comparar informações','Compartilhar imediatamente','Confiar apenas no título'],c:0,why:'Checar a fonte e outras referências ajuda a evitar desinformação.'},
-    {q:'O que é cidadania digital?',a:['Usar a internet sem regras','Participar do ambiente digital com responsabilidade e respeito','Publicar dados pessoais livremente'],c:1,why:'Cidadania digital envolve direitos, deveres, respeito e responsabilidade online.'},
-    {q:'Para que serve a inteligência artificial?',a:['Apenas para substituir a internet','Para executar tarefas que envolvem capacidades como reconhecer padrões e gerar conteúdo','Somente para editar fotografias'],c:1,why:'A IA pode apoiar várias tarefas, como análise, reconhecimento de padrões e geração de conteúdo.'}
-  ];
+  {
+    q: 'Qual característica diferencia principalmente as mídias digitais das mídias tradicionais?',
+    a: [
+      'A impossibilidade de interação com o público',
+      'A circulação de informações apenas em horários determinados',
+      'A possibilidade de interação, atualização e compartilhamento rápido de conteúdos',
+      'A utilização exclusiva de textos impressos',
+      'A ausência de participação dos usuários'
+    ],
+    c: 2,
+    why: 'As mídias digitais permitem interação, atualização constante e compartilhamento de conteúdos em diferentes plataformas.'
+  },
+  {
+    q: 'Uma pessoa utiliza a mesma senha em vários serviços digitais. Qual é o principal risco dessa prática?',
+    a: [
+      'A internet ficará mais lenta',
+      'Uma invasão poderá comprometer várias contas ao mesmo tempo',
+      'Os aplicativos deixarão de receber atualizações',
+      'O armazenamento do celular será reduzido',
+      'As contas ficarão automaticamente públicas'
+    ],
+    c: 1,
+    why: 'Se uma senha for descoberta, criminosos poderão tentar utilizá-la para acessar outros serviços.'
+  },
+  {
+    q: 'Ao encontrar uma notícia surpreendente nas redes sociais, qual procedimento demonstra melhor senso crítico?',
+    a: [
+      'Compartilhar antes que a notícia seja apagada',
+      'Confiar na quantidade de curtidas',
+      'Verificar a fonte, a data e comparar a informação com outras fontes confiáveis',
+      'Acreditar quando a notícia tiver uma imagem',
+      'Considerar verdadeiro tudo que é publicado por conhecidos'
+    ],
+    c: 2,
+    why: 'A verificação da fonte, da data e a comparação com outras referências ajudam a identificar informações falsas ou desatualizadas.'
+  },
+  {
+    q: 'Qual situação representa melhor o exercício da cidadania digital?',
+    a: [
+      'Publicar informações pessoais de outras pessoas sem autorização',
+      'Utilizar perfis falsos para ofender usuários',
+      'Compartilhar qualquer conteúdo sem verificar sua origem',
+      'Respeitar opiniões, proteger dados pessoais e agir com responsabilidade na internet',
+      'Ignorar as regras das plataformas digitais'
+    ],
+    c: 3,
+    why: 'A cidadania digital envolve direitos, deveres, respeito, segurança e responsabilidade no ambiente online.'
+  },
+  {
+    q: 'Uma ferramenta de inteligência artificial analisa milhares de imagens para reconhecer objetos. Qual capacidade está sendo utilizada?',
+    a: [
+      'Impressão física de documentos',
+      'Reconhecimento de padrões em dados',
+      'Substituição da conexão com a internet',
+      'Armazenamento exclusivo de arquivos de texto',
+      'Criação de equipamentos sem programação'
+    ],
+    c: 1,
+    why: 'Sistemas de IA podem identificar padrões em grandes conjuntos de dados e utilizar esse aprendizado para reconhecer elementos em novas imagens.'
+  }
+];
   function feedback(id,msg){$(id).textContent=msg||'';}
   const topics = {
     fundamentos: {

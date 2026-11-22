@@ -1445,7 +1445,7 @@ async function nextQuestion(){
     }
 
     answered=true;
-    const q=questions[quizIndex];
+    const q=quizQuestions[quizIndex];
     const correct=selected===q.c;
 
     if(correct) score++;

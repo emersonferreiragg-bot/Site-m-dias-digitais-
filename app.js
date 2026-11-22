@@ -1440,8 +1440,7 @@ function startQuiz(){
   quizCompleted=false;
   quizSaving=false;
 
-  quizQuestions = shuffleArray(questions).slice(0, 10);
-
+  quizQuestions = shuffleArray(questions).slice(0, 10).map(shuffleQuestion);
   renderQuestion();
   quizDialog.showModal();
 }

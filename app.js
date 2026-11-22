@@ -50,7 +50,6 @@ let quizCompleted = false, quizSaving = false;
         <h3>Conclusão</h3>
         <p>As mídias digitais transformaram a maneira como aprendemos, trabalhamos e nos comunicamos. Quando utilizadas com responsabilidade, podem ser grandes ferramentas de conhecimento e criatividade.</p>
       `
-      `
     }
   };
 

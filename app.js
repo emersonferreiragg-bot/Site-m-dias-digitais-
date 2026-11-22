@@ -1549,6 +1549,7 @@ $('open-auth').addEventListener('click',()=>{feedback('auth-feedback','');authDi
 $('profile-action').addEventListener('click',()=>{feedback('auth-feedback','');authDialog.showModal();});
 $('signup-btn').addEventListener('click',signUp);
 $('login-btn').addEventListener('click',signIn);
+$('resend-email-btn').addEventListener('click',resendConfirmationEmail);
 $('logout-btn').addEventListener('click',signOut);
 $('start-quiz').addEventListener('click',startQuiz);
 $('quiz-next').addEventListener('click',nextQuestion);

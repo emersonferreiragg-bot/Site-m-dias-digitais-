@@ -1575,6 +1575,7 @@ $('profile-action').addEventListener('click',()=>{feedback('auth-feedback','');a
 $('signup-btn').addEventListener('click',signUp);
 $('login-btn').addEventListener('click',signIn);
 $('resend-email-btn').addEventListener('click',resendConfirmationEmail);
+$('forgot-password-btn').addEventListener('click',forgotPassword);
 $('logout-btn').addEventListener('click',signOut);
 $('start-quiz').addEventListener('click',startQuiz);
 $('quiz-next').addEventListener('click',nextQuestion);

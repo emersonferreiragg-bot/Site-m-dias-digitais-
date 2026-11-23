@@ -1344,12 +1344,126 @@ let quizCompleted = false, quizSaving = false;
     showTopic(topic);
   }
   function init(){
-    if(!window.supabase){console.warn('Biblioteca Supabase não carregou.');return;}
-    if(!key || key.includes('COLE_AQUI')){console.warn('Configure a chave publicável em config.js.');return;}
-    supabase=window.supabase.createClient(url,key);
-    supabase.auth.onAuthStateChange((_event,session)=>{currentUser=session?.user||null;setTimeout(refreshProfile,0);});
-    refreshProfile(); loadRanking();
+  if(!window.supabase){
+    console.warn('Supabase não carregado.');
+    return;
   }
+
+  if(!key || key.includes('COLE_AQUI')){
+    console.warn('Configure a chave do Supabase.');
+    return;
+  }
+
+  supabase=window.supabase.createClient(url,key);
+
+  supabase.auth.onAuthStateChange((_event,session)=>{
+    currentUser=session?.user||null;
+    setTimeout(refreshProfile,0);
+  });
+
+  refreshProfile();
+  loadRanking();
+}
+
+async function signUp(){
+  if(!supabase)return feedback('Supabase não configurado.');
+
+  const name=$('auth-name').value.trim();
+  const email=$('auth-email').value.trim();
+  const password=$('auth-password').value;
+
+  if(!name || !email || !password){
+    return feedback('Preencha todos os campos.');
+  }
+
+  const {data,error}=await supabase.auth.signUp({
+    email,
+    password,
+    options:{
+      data:{full_name:name},
+      emailRedirectTo:window.location.origin+window.location.pathname
+    }
+  });
+
+  if(error)return feedback(error.message);
+
+  if(data.session){
+    currentUser=data.user;
+    await refreshProfile();
+    feedback('Conta criada com sucesso!');
+  }else{
+    feedback('Conta criada! Verifique seu e-mail para confirmar o cadastro.');
+  }
+}
+
+async function refreshProfile(){
+  if(!supabase)return;
+
+  const {data:{user}}=await supabase.auth.getUser();
+  currentUser=user;
+
+  const avatarImage=$('profile-avatar-image');
+  const avatarFallback=$('profile-avatar-fallback');
+
+  if(user){
+    $('profile-title').textContent=
+      user.user_metadata?.full_name||user.email||'Estudante';
+
+    $('profile-description').textContent=
+      user.email||'Conta conectada';
+
+    $('profile-action').hidden=true;
+    $('edit-profile-btn').hidden=false;
+    $('open-auth').hidden=true;
+    $('logout-btn').hidden=false;
+
+    const {data}=await supabase
+      .from('profiles')
+      .select('full_name,points,level')
+      .eq('id',user.id)
+      .maybeSingle();
+
+    if(data){
+      $('profile-title').textContent=
+        data.full_name||user.user_metadata?.full_name||user.email;
+
+      $('profile-points').textContent=data.points??0;
+      $('profile-level').textContent=data.level??1;
+    }
+
+    const avatarPath=user.user_metadata?.avatar_path;
+
+    if(avatarPath){
+      const {data:avatarData}=supabase.storage
+        .from('avatars')
+        .getPublicUrl(avatarPath);
+
+      avatarImage.src=avatarData.publicUrl+'?t='+Date.now();
+      avatarImage.hidden=false;
+      avatarFallback.hidden=true;
+    }else{
+      avatarImage.hidden=true;
+      avatarFallback.hidden=false;
+    }
+
+  }else{
+    $('profile-title').textContent='Visitante';
+    $('profile-description').textContent='Entre para acompanhar seu progresso';
+
+    $('profile-action').hidden=false;
+    $('edit-profile-btn').hidden=true;
+    $('open-auth').hidden=false;
+    $('logout-btn').hidden=true;
+
+    $('profile-points').textContent='0';
+    $('profile-level').textContent='1';
+
+    avatarImage.hidden=true;
+    avatarFallback.hidden=false;
+  }
+
+  loadRanking();
+}
   async function signUp(){
     if(!supabase)return feedback('auth-feedback','Configure a chave publicável no arquivo config.js primeiro.');
     const name=$('auth-name').value.trim(),email=$('auth-email').value.trim(),password=$('auth-password').value;

@@ -1380,6 +1380,8 @@ let quizCompleted = false, quizSaving = false;
     $('profile-title').textContent=user.user_metadata?.full_name||user.email||'Estudante';
     $('profile-description').textContent='Sua conta está conectada. Seus resultados e pontos ficam associados a este perfil.';
     $('profile-action').textContent='Gerenciar conta';
+    $('profile-action').hidden = true;
+    $('edit-profile-btn').hidden = false;
     $('open-auth').hidden=true;
     $('logout-btn').hidden=false;
 
@@ -1415,6 +1417,8 @@ let quizCompleted = false, quizSaving = false;
     $('profile-title').textContent='Seu perfil';
     $('profile-description').textContent='Entre ou crie uma conta para salvar seus pontos e acompanhar sua evolução.';
     $('profile-action').textContent='Entrar / Criar conta';
+    $('profile-action').hidden = false;
+    $('edit-profile-btn').hidden = true;
     $('open-auth').hidden=false;
     $('profile-points').textContent='0';
     $('profile-quizzes').textContent='0';

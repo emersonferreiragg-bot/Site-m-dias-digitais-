@@ -166,3 +166,21 @@ button{font:inherit;cursor:pointer}.menu-link{border:1px solid var(--line,rgba(2
   object-fit: cover;
   border-radius: 50%;
 }
+
+/* Janela de edição do perfil */
+#edit-profile-dialog {
+  width: min(90%, 400px);
+  padding: 28px;
+  border: 1px solid rgba(53,216,245,.3);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(155,108,255,.16), transparent 40%),
+    linear-gradient(145deg, #111d35, #0b1223);
+  color: var(--text);
+  box-shadow: 0 24px 90px #000b;
+}
+
+#edit-profile-dialog::backdrop {
+  background: rgba(3,7,18,.82);
+  backdrop-filter: blur(6px);
+}

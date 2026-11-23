@@ -1713,6 +1713,67 @@ $('content-back').addEventListener('click',()=>{
     behavior:'smooth'
   });
 });
+// Alterar foto de perfil
+$('change-avatar-btn').addEventListener('click', async () => {
+  if (!supabase) {
+    alert('Serviço de autenticação indisponível.');
+    return;
+  }
 
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) {
+    alert('Entre na sua conta para alterar a foto.');
+    return;
+  }
+
+  $('profile-avatar-input').click();
+});
+
+$('profile-avatar-input').addEventListener('change', async (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
+    alert('Escolha uma imagem JPG, PNG ou WEBP.');
+    event.target.value = '';
+    return;
+  }
+
+  if (file.size > 2 * 1024 * 1024) {
+    alert('A imagem deve ter no máximo 2 MB.');
+    event.target.value = '';
+    return;
+  }
+
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return;
+
+  const extension = file.type.split('/')[1].replace('jpeg', 'jpg');
+  const path = `${user.id}/avatar.${extension}`;
+
+  const { error: uploadError } = await supabase.storage
+    .from('avatars')
+    .upload(path, file, { upsert: true });
+
+  if (uploadError) {
+    alert('Erro ao enviar a foto: ' + uploadError.message);
+    return;
+  }
+
+  const { error: updateError } = await supabase.auth.updateUser({
+    data: { avatar_path: path }
+  });
+
+  if (updateError) {
+    alert('Erro ao atualizar o perfil: ' + updateError.message);
+    return;
+  }
+
+  await refreshProfile();
+  alert('Foto de perfil atualizada!');
+  event.target.value = '';
+});
+  
 init();
 })();

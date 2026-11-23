@@ -1733,8 +1733,15 @@ $('edit-profile-btn').addEventListener('click', async () => {
 $('close-edit-profile-btn').addEventListener('click', () => {
   $('edit-profile-dialog').close();
 });
-  $('edit-profile-avatar-btn').addEventListener('click', () => {
-  $('change-avatar-btn').click();
+  $('edit-profile-avatar-btn').addEventListener('click', async () => {
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) {
+    alert('Entre na sua conta para alterar a foto.');
+    return;
+  }
+
+  $('profile-avatar-input').click();
 });
   $('save-profile-btn').addEventListener('click', async () => {
   const newName = $('edit-profile-name').value.trim();

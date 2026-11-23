@@ -1809,7 +1809,7 @@ $('profile-avatar-input').addEventListener('change', async (event) => {
   if (!user) return;
 
   const extension = file.type.split('/')[1].replace('jpeg', 'jpg');
-  const path = `${user.id}/avatar.${extension}`;
+  const path = `${user.id}/avatar-${Date.now()}.${extension}`;
 
   const { error: uploadError } = await supabase.storage
     .from('avatars')

@@ -222,3 +222,27 @@ button{font:inherit;cursor:pointer}.menu-link{border:1px solid var(--line,rgba(2
   margin-top: 14px;
   min-height: 46px;
 }
+
+#edit-profile-dialog #save-profile-btn {
+  border: none;
+  color: #06121f;
+  background: linear-gradient(100deg, var(--cyan), #68aaff);
+  box-shadow: 0 8px 25px rgba(53,216,245,.18);
+  font-weight: 700;
+}
+
+#edit-profile-dialog #edit-profile-avatar-btn {
+  background: rgba(53,216,245,.08);
+  border: 1px solid rgba(53,216,245,.35);
+  color: var(--cyan);
+}
+
+#edit-profile-dialog #close-edit-profile-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+#edit-profile-dialog button:hover {
+  transform: translateY(-2px);
+}

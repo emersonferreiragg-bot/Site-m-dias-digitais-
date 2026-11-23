@@ -1740,8 +1740,8 @@ $('profile-avatar-input').addEventListener('change', async (event) => {
     return;
   }
 
-  if (file.size > 2 * 1024 * 1024) {
-    alert('A imagem deve ter no máximo 2 MB.');
+  if (file.size > 20 * 1024 * 1024) {
+    alert('A imagem deve ter no máximo 20 MB.');
     event.target.value = '';
     return;
   }

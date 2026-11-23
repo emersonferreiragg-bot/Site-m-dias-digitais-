@@ -1731,6 +1731,9 @@ $('edit-profile-btn').addEventListener('click', async () => {
 });
 
 $('close-edit-profile-btn').addEventListener('click', () => {
+  $('edit-profile-avatar-btn').addEventListener('click', () => {
+  $('change-avatar-btn').click();
+});
   $('edit-profile-dialog').close();
 });
   

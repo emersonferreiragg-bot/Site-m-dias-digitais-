@@ -1717,6 +1717,23 @@ $('content-back').addEventListener('click',()=>{
     behavior:'smooth'
   });
 });
+
+// Abrir e fechar a edição do perfil
+$('edit-profile-btn').addEventListener('click', async () => {
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) return;
+
+  $('edit-profile-name').value =
+    $('profile-title').textContent;
+
+  $('edit-profile-dialog').showModal();
+});
+
+$('close-edit-profile-btn').addEventListener('click', () => {
+  $('edit-profile-dialog').close();
+});
+  
 // Alterar foto de perfil
 $('change-avatar-btn').addEventListener('click', async () => {
   if (!supabase) {

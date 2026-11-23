@@ -1440,10 +1440,76 @@ let quizCompleted = false, quizSaving = false;
   const avatarImage=$('profile-avatar-image');
   const avatarFallback=$('profile-avatar-fallback');
 
+
+function init(){
+  if(!window.supabase){
+    console.warn('Biblioteca Supabase não carregou.');
+    return;
+  }
+
+  if(!key || key.includes('COLE_AQUI')){
+    console.warn('Configure a chave publicável em config.js.');
+    return;
+  }
+
+  supabase=window.supabase.createClient(url,key);
+
+  supabase.auth.onAuthStateChange((_event,session)=>{
+    currentUser=session?.user||null;
+    setTimeout(refreshProfile,0);
+  });
+
+  refreshProfile();
+  loadRanking();
+}
+
+async function signUp(){
+  if(!supabase)return feedback('auth-feedback','Configure a chave publicável no arquivo config.js primeiro.');
+
+  const name=$('auth-name').value.trim();
+  const email=$('auth-email').value.trim();
+  const password=$('auth-password').value;
+
+  if(!name||!email||password.length<6){
+    return feedback('auth-feedback','Informe seu nome, e-mail e uma senha com pelo menos 6 caracteres.');
+  }
+
+  feedback('auth-feedback','Criando sua conta...');
+
+  const {data,error}=await supabase.auth.signUp({
+    email,
+    password,
+    options:{
+      data:{full_name:name},
+      emailRedirectTo: window.location.origin + window.location.pathname
+    }
+  });
+
+  if(error)return feedback('auth-feedback',error.message);
+
+  if(data.session){
+    feedback('auth-feedback','Conta criada! Você já está conectado.');
+    await refreshProfile();
+  }else{
+    feedback('auth-feedback','Cadastro iniciado! Verifique seu e-mail para confirmar a conta e depois entre.');
+  }
+}
+
+async function refreshProfile(){
+  if(!supabase)return;
+
+  const {data:{user}}=await supabase.auth.getUser();
+  currentUser=user;
+
+  const avatarImage=$('profile-avatar-image');
+  const avatarFallback=$('profile-avatar-fallback');
+
   if(user){
     $('profile-title').textContent=user.user_metadata?.full_name||user.email||'Estudante';
     $('profile-description').textContent='Sua conta está conectada. Seus resultados e pontos ficam associados a este perfil.';
     $('profile-action').textContent='Gerenciar conta';
+    $('profile-action').hidden=true;
+    $('edit-profile-btn').hidden=false;
     $('open-auth').hidden=true;
     $('logout-btn').hidden=false;
 
@@ -1466,7 +1532,7 @@ let quizCompleted = false, quizSaving = false;
         .from('avatars')
         .getPublicUrl(avatarPath);
 
-      avatarImage.src=avatarData.publicUrl;
+      avatarImage.src=avatarData.publicUrl+'?t='+Date.now();
       avatarImage.hidden=false;
       avatarFallback.hidden=true;
     }else{
@@ -1479,6 +1545,8 @@ let quizCompleted = false, quizSaving = false;
     $('profile-title').textContent='Seu perfil';
     $('profile-description').textContent='Entre ou crie uma conta para salvar seus pontos e acompanhar sua evolução.';
     $('profile-action').textContent='Entrar / Criar conta';
+    $('profile-action').hidden=false;
+    $('edit-profile-btn').hidden=true;
     $('open-auth').hidden=false;
     $('profile-points').textContent='0';
     $('profile-quizzes').textContent='0';
@@ -1491,6 +1559,7 @@ let quizCompleted = false, quizSaving = false;
 
   loadRanking();
 }
+
   async function signUp(){
     if(!supabase)return feedback('auth-feedback','Configure a chave publicável no arquivo config.js primeiro.');
     const name=$('auth-name').value.trim(),email=$('auth-email').value.trim(),password=$('auth-password').value;

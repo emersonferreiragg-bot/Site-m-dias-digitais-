@@ -1731,10 +1731,45 @@ $('edit-profile-btn').addEventListener('click', async () => {
 });
 
 $('close-edit-profile-btn').addEventListener('click', () => {
+  $('edit-profile-dialog').close();
+});
   $('edit-profile-avatar-btn').addEventListener('click', () => {
   $('change-avatar-btn').click();
 });
+  $('save-profile-btn').addEventListener('click', async () => {
+  const newName = $('edit-profile-name').value.trim();
+
+  if (!newName) {
+    alert('Digite um nome para o perfil.');
+    return;
+  }
+
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (!user) return;
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ display_name: newName })
+    .eq('id', user.id);
+
+  if (error) {
+    alert('Erro ao atualizar o nome: ' + error.message);
+    return;
+  }
+
+  const { error: metadataError } = await supabase.auth.updateUser({
+    data: { full_name: newName }
+  });
+
+  if (metadataError) {
+    alert('O nome foi atualizado no perfil, mas houve um erro nos dados da conta: ' + metadataError.message);
+  }
+
+  await refreshProfile();
   $('edit-profile-dialog').close();
+
+  alert('Perfil atualizado com sucesso!');
 });
   
 // Alterar foto de perfil

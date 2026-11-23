@@ -1402,7 +1402,7 @@ let quizCompleted = false, quizSaving = false;
         .from('avatars')
         .getPublicUrl(avatarPath);
 
-      avatarImage.src=avatarData.publicUrl;
+      avatarImage.src = avatarData.publicUrl + '?t=' + Date.now();
       avatarImage.hidden=false;
       avatarFallback.hidden=true;
     }else{
